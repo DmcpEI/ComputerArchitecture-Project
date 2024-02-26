@@ -14,6 +14,18 @@ architecture Behavioral of MUX_R is
 
 begin
 
+	process(SEL_Dados, Constante, Dados_M, Dados_IN, Resultado)
+	begin
+	
+		case SEL_Dados is
+			when "00" => Dados_R <= Resultado;
+			when "01" => Dados_R <= Dados_IN;
+			when "10" => Dados_R <= Dados_M;
+			when "11" => Dados_R <= Constante;
+			when others => Dados_R <= 'X';
+		end case;
+	
+	end process;
 
 end Behavioral;
 
