@@ -13,6 +13,10 @@ architecture Behavioral of Memoria_de_Dados is
 
 begin
 
+	process(Constante, WR, clk, Operando1)
+	begin
+	
+	end process;
 
 end Behavioral;
 

@@ -12,6 +12,23 @@ architecture Behavioral of Periferico_de_Saida is
 
 begin
 
+	process(Operando1, ESCR_P, clk)
+	begin
+		
+		-- Se está na transição ascendente do relógio
+		if rising_edge(clk) then
+			
+			-- Se o sinal ESCR_P está a 1
+			if ESCR_P = '1' then
+				
+				-- Atribui o valor da entrada Operando1 á saída POUT
+				POUT <= Operando1;
+			
+			end if;
+		
+		end if;
+	
+	end process;
 
 end Behavioral;
 

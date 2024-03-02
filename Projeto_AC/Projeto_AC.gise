@@ -28,12 +28,27 @@
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="MUX_PC.prj"/>
     <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="MUX_PC.stx"/>
     <file xil_pn:fileType="FILE_XST" xil_pn:name="MUX_PC.xst"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="MUX_R.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="MUX_R.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="MUX_R.xst"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="PC.prj"/>
     <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="PC.stx"/>
     <file xil_pn:fileType="FILE_XST" xil_pn:name="PC.xst"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="Periferico_de_Entrada.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="Periferico_de_Entrada.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="Periferico_de_Entrada.xst"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="Periferico_de_Saida.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="Periferico_de_Saida.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="Periferico_de_Saida.xst"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="Placa_Mae.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="Placa_Mae.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="Placa_Mae.xst"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="Processador.prj"/>
     <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="Processador.stx"/>
     <file xil_pn:fileType="FILE_XST" xil_pn:name="Processador.xst"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="Registo_Flags.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="Registo_Flags.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="Registo_Flags.xst"/>
     <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/xst.xmsgs"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xst"/>
   </files>

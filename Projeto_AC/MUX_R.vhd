@@ -16,13 +16,18 @@ begin
 
 	process(SEL_Dados, Constante, Dados_M, Dados_IN, Resultado)
 	begin
-	
+		
+		-- Início da estrutura de seleção de casos dependendo do valor de SEL_Dados
 		case SEL_Dados is
+			
+			-- Atribui um valor á saída Dados_R dependendo do valor de SEL_Dados
 			when "00" => Dados_R <= Resultado;
 			when "01" => Dados_R <= Dados_IN;
 			when "10" => Dados_R <= Dados_M;
 			when "11" => Dados_R <= Constante;
-			when others => Dados_R <= 'X';
+			-- Para qualquer outro valor de SEL_Dados, atribui 'X' a Dados_R
+			when others => Dados_R <= (others => 'X');
+			
 		end case;
 	
 	end process;

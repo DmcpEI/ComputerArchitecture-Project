@@ -7,6 +7,7 @@ entity MUX_PC is
            S_FLAG : in  STD_LOGIC;
            Operando1 : in  STD_LOGIC_VECTOR (7 downto 0);
            SEL_PC : in  STD_LOGIC_VECTOR (2 downto 0);
+			  NOR_Operando1 : in STD_LOGIC;
            ESCR_PC : out  STD_LOGIC);
 end MUX_PC;
 
@@ -17,13 +18,18 @@ begin
 	process(zero, um, S_FLAG, Operando1, SEL_PC)
 	begin
 	
+		-- Início da estrutura de seleção de casos dependendo do valor de SEL_PC
 		case SEL_PC is
+		
+			-- Atribui o valor de uma das entradas á saída ESCR_PC dependendo do valor de SEL_PC
 			when "000" => ESCR_PC <= zero;
 			when "001" => ESCR_PC <= um;
 			when "010" => ESCR_PC <= S_FLAG;
 			when "011" => ESCR_PC <= Operando1(7);
 			when "100" => ESCR_PC <= NOT (Operando1(7) OR Operando1(6) OR Operando1(5) OR Operando1(4) OR Operando1(3) OR Operando1(2) OR Operando1(1) OR Operando1(0));
+			-- Para qualquer outro valor de SEL_PC, atribui 'X' a ESCR_PC
 			when others => ESCR_PC <= 'X';
+			
 		end case;
 	
 	end process;

@@ -5,17 +5,17 @@ Parameter TMPDIR set to /home/ise/Projects/Projeto_AC/xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.21 secs
+Total CPU time to Xst completion: 0.19 secs
  
 --> 
 Parameter xsthdpdir set to /home/ise/Projects/Projeto_AC/xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.21 secs
+Total CPU time to Xst completion: 0.19 secs
  
 --> 
-Reading design: ALU.prj
+Reading design: MUX_R.prj
 
 TABLE OF CONTENTS
   1) Synthesis Options Summary
@@ -42,20 +42,18 @@ TABLE OF CONTENTS
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Parsing VHDL file "/home/ise/Projects/Projeto_AC/ALU.vhd" into library work
-Parsing entity <ALU>.
-Parsing architecture <Behavioral> of entity <alu>.
-
-
-Total REAL time to Xst completion: 21.00 secs
-Total CPU time to Xst completion: 20.34 secs
- 
+Parsing VHDL file "/home/ise/Projects/Projeto_AC/MUX_R.vhd" into library work
+Parsing entity <MUX_R>.
+Parsing architecture <Behavioral> of entity <mux_r>.
+ERROR:HDLCompiler:303 - "/home/ise/Projects/Projeto_AC/MUX_R.vhd" Line 29: Character 'X' is not in type std_logic_vector
+ERROR:HDLCompiler:854 - "/home/ise/Projects/Projeto_AC/MUX_R.vhd" Line 13: Unit <behavioral> ignored due to previous errors.
+VHDL file /home/ise/Projects/Projeto_AC/MUX_R.vhd ignored due to errors
 --> 
 
 
-Total memory usage is 434252 kilobytes
+Total memory usage is 431620 kilobytes
 
-Number of errors   :    0 (   0 filtered)
+Number of errors   :    2 (   0 filtered)
 Number of warnings :    0 (   0 filtered)
 Number of infos    :    0 (   0 filtered)
 

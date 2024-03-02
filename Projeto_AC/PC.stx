@@ -12,7 +12,7 @@ Parameter xsthdpdir set to /home/ise/Projects/Projeto_AC/xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.20 secs
+Total CPU time to Xst completion: 0.19 secs
  
 --> 
 Reading design: PC.prj
@@ -47,13 +47,13 @@ Parsing entity <PC>.
 Parsing architecture <Behavioral> of entity <pc>.
 
 
-Total REAL time to Xst completion: 21.00 secs
-Total CPU time to Xst completion: 20.26 secs
+Total REAL time to Xst completion: 20.00 secs
+Total CPU time to Xst completion: 19.86 secs
  
 --> 
 
 
-Total memory usage is 431624 kilobytes
+Total memory usage is 432532 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    0 (   0 filtered)

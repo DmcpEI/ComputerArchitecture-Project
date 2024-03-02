@@ -13,6 +13,41 @@ architecture Behavioral of Registo_Flags is
 
 begin
 
+	process(clk, E_FLAG, ESCR_R, SEL_FLAG)
+	
+	-- Declaração da variavel registo
+	variable registo: STD_LOGIC_VECTOR (4 downto 0);
+	
+	begin
+	
+		-- Se está na transição ascendente do relógio
+		if rising_edge(clk) then
+		
+			-- Se o bit mais significativo de ESCR_R está a 1
+			if ESCR_R(1) = '1' then
+				
+				-- Guarda o valor da entrada E_FLAG na variável registo
+				registo := E_FLAG;
+			
+			end if;
+		
+		end if;
+		
+		-- Início da estrutura de seleção de casos dependendo do valor de SEL_FLAG
+		case SEL_FLAG is
+		
+			-- Atribui o valor de um bit da variavel registo á saída S_FLAG dependendo do valor de SEL_FLAG	
+			when "000" => S_FLAG <= registo(0);
+			when "001" => S_FLAG <= registo(1);
+			when "010" => S_FLAG <= registo(2);
+			when "011" => S_FLAG <= registo(3);
+			when "100" => S_FLAG <= registo(4);
+			-- Para qualquer outro valor de SEL_FLAG, atribui 'X' a S_FLAG
+			when others => S_FLAG <= 'X';
+		
+		end case;
+	
+	end process;
 
 end Behavioral;
 
