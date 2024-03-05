@@ -31,6 +31,9 @@
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="MUX_R.prj"/>
     <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="MUX_R.stx"/>
     <file xil_pn:fileType="FILE_XST" xil_pn:name="MUX_R.xst"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="Memoria_de_Instrucoes.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="Memoria_de_Instrucoes.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="Memoria_de_Instrucoes.xst"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="PC.prj"/>
     <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="PC.stx"/>
     <file xil_pn:fileType="FILE_XST" xil_pn:name="PC.xst"/>
