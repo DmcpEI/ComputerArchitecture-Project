@@ -71,6 +71,8 @@ begin
 			when "00011001" => opcode <= "00001"; SEL_R <= "XXX111"; Constante <= "XXXXXXXX";
 			-- JMP 26
 			when "00011010" => opcode <= "10011"; SEL_R <= "XXXXXX"; Constante <= "00011010";
+			--Outros
+			when others => opcode <= "XXXXX"; SEL_R <= "XXXXXX"; Constante <= "XXXXXXXX";
 	
 		end case;
 		

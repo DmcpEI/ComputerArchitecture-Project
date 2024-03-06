@@ -5,17 +5,17 @@ Parameter TMPDIR set to /home/ise/Projects/Projeto_AC/xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.38 secs
+Total CPU time to Xst completion: 0.42 secs
  
 --> 
 Parameter xsthdpdir set to /home/ise/Projects/Projeto_AC/xst
 
 
 Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.38 secs
+Total CPU time to Xst completion: 0.42 secs
  
 --> 
-Reading design: PC.prj
+Reading design: ROM_de_Descodificacao.prj
 
 TABLE OF CONTENTS
   1) Synthesis Options Summary
@@ -42,18 +42,18 @@ TABLE OF CONTENTS
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Parsing VHDL file "/home/ise/Projects/Projeto_AC/PC.vhd" into library work
-Parsing entity <PC>.
-Parsing architecture <Behavioral> of entity <pc>.
+Parsing VHDL file "/home/ise/Projects/Projeto_AC/ROM_de_Descodificacao.vhd" into library work
+Parsing entity <ROM_de_Descodificacao>.
+Parsing architecture <Behavioral> of entity <rom_de_descodificacao>.
 
 
-Total REAL time to Xst completion: 44.00 secs
-Total CPU time to Xst completion: 43.47 secs
+Total REAL time to Xst completion: 47.00 secs
+Total CPU time to Xst completion: 45.62 secs
  
 --> 
 
 
-Total memory usage is 432536 kilobytes
+Total memory usage is 431700 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    0 (   0 filtered)

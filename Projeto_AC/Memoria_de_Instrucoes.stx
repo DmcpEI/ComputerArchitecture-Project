@@ -4,15 +4,15 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 Parameter TMPDIR set to /home/ise/Projects/Projeto_AC/xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.41 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.38 secs
  
 --> 
 Parameter xsthdpdir set to /home/ise/Projects/Projeto_AC/xst
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.42 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.39 secs
  
 --> 
 Reading design: Memoria_de_Instrucoes.prj
@@ -45,14 +45,17 @@ TABLE OF CONTENTS
 Parsing VHDL file "/home/ise/Projects/Projeto_AC/Memoria_de_Instrucoes.vhd" into library work
 Parsing entity <Memoria_de_Instrucoes>.
 Parsing architecture <Behavioral> of entity <memoria_de_instrucoes>.
-ERROR:HDLCompiler:806 - "/home/ise/Projects/Projeto_AC/Memoria_de_Instrucoes.vhd" Line 75: Syntax error near "process".
-VHDL file /home/ise/Projects/Projeto_AC/Memoria_de_Instrucoes.vhd ignored due to errors
+
+
+Total REAL time to Xst completion: 45.00 secs
+Total CPU time to Xst completion: 45.01 secs
+ 
 --> 
 
 
-Total memory usage is 431696 kilobytes
+Total memory usage is 431700 kilobytes
 
-Number of errors   :    1 (   0 filtered)
+Number of errors   :    0 (   0 filtered)
 Number of warnings :    0 (   0 filtered)
 Number of infos    :    0 (   0 filtered)
 
