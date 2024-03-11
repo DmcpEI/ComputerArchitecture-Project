@@ -49,10 +49,10 @@ BEGIN
 	
 		Dados_IN <= "00001100"; Dados_M <= "00000001"; Resultado <= "00101001"; Constante <= "00001001"; 
 		
-		SEL_Data <= "00"; wait for 10 ns;
-		SEL_Data <= "01"; wait for 10 ns;
-		SEL_Data <= "10"; wait for 10 ns;
-		SEL_Data <= "11"; wait for 10 ns;
+		SEL_Dados <= "00"; wait for 10 ns;
+		SEL_Dados <= "01"; wait for 10 ns;
+		SEL_Dados <= "10"; wait for 10 ns;
+		SEL_Dados <= "11"; wait for 10 ns;
 		
       assert FALSE Report "Simulation Finished" severity FAILURE;
 	

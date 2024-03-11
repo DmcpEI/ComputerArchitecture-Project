@@ -1,0 +1,35 @@
+Command line:
+   Test_ALU_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  33779
+
+Mon Mar 11 11:55:16 2024
+
+
+ Elaboration Time: 0.35 sec
+
+ Current Memory Usage: 215.63 Meg
+
+ Total Signals          : 10
+ Total Nets             : 33
+ Total Signal Drivers   : 5
+ Total Blocks           : 6
+ Total Primitive Blocks : 5
+ Total Processes        : 2
+ Total Traceable Variables  : 15
+ Total Scalar Nets and Variables : 534
+Total Line Count : 32
+
+** Failure:Simulation Finished
+User(VHDL) Code Called Simulation Stop
+In process Test_ALU.vhd:stim_proc 
+ 
+
+
+ Total Simulation Time: 0.4 sec
+
+ Current Memory Usage: 293.229 Meg
+
+Mon Mar 11 11:55:33 2024
+

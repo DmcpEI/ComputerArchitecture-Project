@@ -1,0 +1,35 @@
+Command line:
+   Test_MUX_R_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  34208
+
+Mon Mar 11 11:57:55 2024
+
+
+ Elaboration Time: 0.19 sec
+
+ Current Memory Usage: 215.405 Meg
+
+ Total Signals          : 12
+ Total Nets             : 42
+ Total Signal Drivers   : 6
+ Total Blocks           : 3
+ Total Primitive Blocks : 2
+ Total Processes        : 2
+ Total Traceable Variables  : 8
+ Total Scalar Nets and Variables : 402
+Total Line Count : 12
+
+** Failure:Simulation Finished
+User(VHDL) Code Called Simulation Stop
+In process Test_MUX_R.vhd:stim_proc 
+ 
+
+
+ Total Simulation Time: 0.24 sec
+
+ Current Memory Usage: 293.003 Meg
+
+Mon Mar 11 11:58:46 2024
+

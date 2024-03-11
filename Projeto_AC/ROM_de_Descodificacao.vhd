@@ -36,7 +36,7 @@ begin
 			
 		--Lógica e Aritmética
 			-- ADD Ri, Rj
-			when "000101" => SEL_ALU <= "0000"; ESCR_P <= '0'; SEL_Dados <= "00"; ESCR_R <= "01"; WR <= '0'; SEL_PC <= "000"; SEL_FLAG <= "XXX";
+			when "00101" => SEL_ALU <= "0000"; ESCR_P <= '0'; SEL_Dados <= "00"; ESCR_R <= "01"; WR <= '0'; SEL_PC <= "000"; SEL_FLAG <= "XXX";
 			-- SUB Ri, Rj
 			when "00110" => SEL_ALU <= "0001"; ESCR_P <= '0'; SEL_Dados <= "00"; ESCR_R <= "01"; WR <= '0'; SEL_PC <= "000"; SEL_FLAG <= "XXX";
 			-- AND Ri, Rj

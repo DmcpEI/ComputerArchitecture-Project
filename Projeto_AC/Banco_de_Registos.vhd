@@ -38,6 +38,10 @@ begin
 					when "101" => R5 <= Dados_R;
 					when "110" => R6 <= Dados_R;
 					when "111" => R7 <= Dados_R;
+					-- Para qualquer outro valor de SEL_R, atribui 'X' a Operando1 e ao Operando2
+					when others =>
+					  Operando1 <= (others => 'X');
+					  Operando2 <= (others => 'X');
 					
 				end case;
 				

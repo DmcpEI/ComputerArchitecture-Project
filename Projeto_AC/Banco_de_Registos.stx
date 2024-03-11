@@ -4,15 +4,15 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 Parameter TMPDIR set to /home/ise/Projects/Projeto_AC/xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.56 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.18 secs
  
 --> 
 Parameter xsthdpdir set to /home/ise/Projects/Projeto_AC/xst
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.56 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.19 secs
  
 --> 
 Reading design: Banco_de_Registos.prj
@@ -47,8 +47,8 @@ Parsing entity <Banco_de_Registos>.
 Parsing architecture <Behavioral> of entity <banco_de_registos>.
 
 
-Total REAL time to Xst completion: 46.00 secs
-Total CPU time to Xst completion: 45.73 secs
+Total REAL time to Xst completion: 20.00 secs
+Total CPU time to Xst completion: 20.08 secs
  
 --> 
 

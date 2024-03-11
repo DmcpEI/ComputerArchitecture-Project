@@ -1,0 +1,22 @@
+Running: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/fuse -intstyle ise -incremental -lib secureip -o /home/ise/Projects/Projeto_AC/Test_MUX_R_isim_beh.exe -prj /home/ise/Projects/Projeto_AC/Test_MUX_R_beh.prj work.Test_MUX_R 
+ISim P.20131013 (signature 0xfbc00daa)
+Number of CPUs detected in this system: 10
+Turning on mult-threading, number of parallel sub-compilation jobs: 20 
+Determining compilation order of HDL files
+Parsing VHDL file "/home/ise/Projects/Projeto_AC/MUX_R.vhd" into library work
+Parsing VHDL file "/home/ise/Projects/Projeto_AC/Test_MUX_R.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Fuse Memory Usage: 95308 KB
+Fuse CPU Usage: 3580 ms
+Compiling package standard
+Compiling package std_logic_1164
+Compiling architecture behavioral of entity MUX_R [mux_r_default]
+Compiling architecture behavior of entity test_mux_r
+Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
+Compiled 5 VHDL Units
+Built simulation executable /home/ise/Projects/Projeto_AC/Test_MUX_R_isim_beh.exe
+Fuse Memory Usage: 1445444 KB
+Fuse CPU Usage: 3730 ms
+GCC CPU Usage: 550 ms

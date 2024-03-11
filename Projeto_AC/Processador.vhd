@@ -119,6 +119,7 @@ begin
 	Periferico_de_Saida_P : Periferico_de_Saida port map (Sinal_Operando1, ESCR_P, clk, POUT);
 	NOR_Operando_P : NOR_Operando port map (Sinal_Operando1, NOR_Operando1);
 	
+	Constante_OUT <= Constante_IN;
 	Operando1 <= Sinal_Operando1;
 
 end Struct;

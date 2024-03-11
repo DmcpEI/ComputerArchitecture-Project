@@ -43,13 +43,13 @@ end Component;
 signal WR : STD_LOGIC;
 signal opcode : STD_LOGIC_VECTOR(4 downto 0);
 signal SEL_R : STD_LOGIC_VECTOR(5 downto 0);
-signal Endereco, Constante, Dados_M, Operando1 : STD_LOGIC_VECTOR(7 downto 0);
+signal Endereco, Constante_IN, Constante_OUT, Dados_M, Operando1 : STD_LOGIC_VECTOR(7 downto 0);
 
 begin
 
-	Processador_PM : Processador port map (reset, opcode, SEL_R, Constante, Dados_M, PIN, clk, Constante, Endereco, WR, Operando1, POUT);
-	Memoria_de_Dados_PM : Memoria_de_Dados port map (Constante, WR, clk, Operando1, Dados_M);
-	Memoria_de_Instrucoes_PM : Memoria_de_Instrucoes port map (Endereco, opcode, Constante, SEL_R);
+	Processador_PM : Processador port map (reset, opcode, SEL_R, Constante_IN, Dados_M, PIN, clk, Constante_OUT, Endereco, WR, Operando1, POUT);
+	Memoria_de_Dados_PM : Memoria_de_Dados port map (Constante_OUT, WR, clk, Operando1, Dados_M);
+	Memoria_de_Instrucoes_PM : Memoria_de_Instrucoes port map (Endereco, opcode, Constante_IN, SEL_R);
 
 end Struct;
 
