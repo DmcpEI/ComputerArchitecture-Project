@@ -1,10 +1,6 @@
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
  
--- Uncomment the following library declaration if using
--- arithmetic functions with Signed or Unsigned values
---USE ieee.numeric_std.ALL;
- 
 ENTITY Test_MUX_R IS
 END Test_MUX_R;
  
@@ -33,10 +29,6 @@ ARCHITECTURE behavior OF Test_MUX_R IS
 
  	--Outputs
    signal Dados_R : std_logic_vector(7 downto 0);
-   -- No clocks detected in port list. Replace <clock> below with 
-   -- appropriate port name 
- 
-   constant <clock>_period : time := 10 ns;
  
 BEGIN
  
@@ -49,28 +41,21 @@ BEGIN
           Resultado => Resultado,
           Dados_R => Dados_R
         );
-
-   -- Clock process definitions
-   <clock>_process :process
-   begin
-		<clock> <= '0';
-		wait for <clock>_period/2;
-		<clock> <= '1';
-		wait for <clock>_period/2;
-   end process;
  
 
    -- Stimulus process
    stim_proc: process
    begin		
-      -- hold reset state for 100 ns.
-      wait for 100 ns;	
-
-      wait for <clock>_period*10;
-
-      -- insert stimulus here 
-
-      wait;
+	
+		Dados_IN <= "00001100"; Dados_M <= "00000001"; Resultado <= "00101001"; Constante <= "00001001"; 
+		
+		SEL_Data <= "00"; wait for 10 ns;
+		SEL_Data <= "01"; wait for 10 ns;
+		SEL_Data <= "10"; wait for 10 ns;
+		SEL_Data <= "11"; wait for 10 ns;
+		
+      assert FALSE Report "Simulation Finished" severity FAILURE;
+	
    end process;
 
 END;

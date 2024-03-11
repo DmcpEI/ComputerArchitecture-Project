@@ -13,7 +13,7 @@ begin
 	process(Operando1)
 	begin
 	
-		NOR_Operando1 <= (Operando1(0) NOR Operando1(7));
+		NOR_Operando1 <= NOT(Operando1(0) OR Operando1(1) OR Operando1(2) OR Operando1(3) OR Operando1(4) OR Operando1(5) OR Operando1(6) OR Operando1(7));
 	
 	end process;
 

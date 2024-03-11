@@ -1,10 +1,6 @@
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
  
--- Uncomment the following library declaration if using
--- arithmetic functions with Signed or Unsigned values
---USE ieee.numeric_std.ALL;
- 
 ENTITY Test_ROM IS
 END Test_ROM;
  
@@ -37,10 +33,6 @@ ARCHITECTURE behavior OF Test_ROM IS
    signal SEL_ALU : std_logic_vector(3 downto 0);
    signal SEL_FLAG : std_logic_vector(2 downto 0);
    signal SEL_PC : std_logic_vector(2 downto 0);
-   -- No clocks detected in port list. Replace <clock> below with 
-   -- appropriate port name 
- 
-   constant <clock>_period : time := 10 ns;
  
 BEGIN
  
@@ -55,28 +47,12 @@ BEGIN
           SEL_FLAG => SEL_FLAG,
           SEL_PC => SEL_PC
         );
-
-   -- Clock process definitions
-   <clock>_process :process
-   begin
-		<clock> <= '0';
-		wait for <clock>_period/2;
-		<clock> <= '1';
-		wait for <clock>_period/2;
-   end process;
  
 
    -- Stimulus process
    stim_proc: process
    begin		
-      -- hold reset state for 100 ns.
-      wait for 100 ns;	
 
-      wait for <clock>_period*10;
-
-      -- insert stimulus here 
-
-      wait;
    end process;
 
 END;

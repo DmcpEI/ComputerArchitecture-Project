@@ -1,10 +1,20 @@
+--------------------------------------------------------------------------------
+-- Company: 
+-- Engineer:
+--
+-- Create Date:   11:35:28 03/11/2024
+-- Design Name:   
+-- Module Name:   /home/ise/Projects/Projeto_AC/Test_ALU_2.vhd
+-- Project Name:  Projeto_AC
+-- Target Device:  
+-- Tool versions:  
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
  
-ENTITY Test_ALU IS
-END Test_ALU;
+ENTITY Test_ALU_2 IS
+END Test_ALU_2;
  
-ARCHITECTURE behavior OF Test_ALU IS 
+ARCHITECTURE behavior OF Test_ALU_2 IS 
  
     -- Component Declaration for the Unit Under Test (UUT)
  

@@ -5,10 +5,11 @@ entity Processador is
     Port ( reset : in  STD_LOGIC;
            opcode : in  STD_LOGIC_VECTOR (4 downto 0);
            SEL_R : in  STD_LOGIC_VECTOR (5 downto 0);
-           Constante : inout  STD_LOGIC_VECTOR (7 downto 0);
+           Constante_IN : in  STD_LOGIC_VECTOR (7 downto 0);
            Dados_M : in  STD_LOGIC_VECTOR (7 downto 0);
            PIN : in  STD_LOGIC_VECTOR (7 downto 0);
 			  clk : STD_LOGIC;
+			  Constante_OUT : out  STD_LOGIC_VECTOR (7 downto 0);
            Endereco : out  STD_LOGIC_VECTOR (7 downto 0);
            WR : out  STD_LOGIC;
            Operando1 : out  STD_LOGIC_VECTOR (7 downto 0);
@@ -107,11 +108,11 @@ signal Sinal_Operando1, Operando2, Resultado, Dados_R, Dados_IN : STD_LOGIC_VECT
 
 begin
 	
-	PC_P : PC port map (clk, reset, Constante, ESCR_PC, Endereco);
+	PC_P : PC port map (clk, reset, Constante_IN, ESCR_PC, Endereco);
 	MUX_PC_P : MUX_PC port map ('0', '1', S_FLAG, Sinal_Operando1, SEL_PC, NOR_Operando1, ESCR_PC);
 	Registo_Flags_P : Registo_Flags port map (clk, E_FLAG, ESCR_R, SEL_FLAG, S_FLAG);
 	ROM_de_Descodificacao_P : ROM_de_Descodificacao port map (opcode, WR, ESCR_P, SEL_Dados, ESCR_R, SEL_ALU, SEL_FLAG, SEL_PC);
-	MUX_R_P : MUX_R port map (SEL_Dados, Constante, Dados_M, Dados_IN, Resultado, Dados_R);
+	MUX_R_P : MUX_R port map (SEL_Dados, Constante_IN, Dados_M, Dados_IN, Resultado, Dados_R);
 	Banco_de_Registos_P : Banco_de_Registos port map (ESCR_R, clk, SEL_R, Dados_R, Sinal_Operando1, Operando2);
 	ALU_P : ALU port map (SEL_ALU, Sinal_Operando1, Operando2, E_FLAG, Resultado);
 	Periferico_de_Entrada_P : Periferico_de_Entrada port map (ESCR_P, PIN, Dados_IN);

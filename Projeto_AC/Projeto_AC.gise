@@ -25,18 +25,18 @@
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="ALU.prj"/>
     <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="ALU.stx"/>
     <file xil_pn:fileType="FILE_XST" xil_pn:name="ALU.xst"/>
-    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="Banco_de_Registos.prj"/>
-    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="Banco_de_Registos.stx"/>
-    <file xil_pn:fileType="FILE_XST" xil_pn:name="Banco_de_Registos.xst"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="MUX_PC.prj"/>
     <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="MUX_PC.stx"/>
     <file xil_pn:fileType="FILE_XST" xil_pn:name="MUX_PC.xst"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="MUX_R.prj"/>
     <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="MUX_R.stx"/>
     <file xil_pn:fileType="FILE_XST" xil_pn:name="MUX_R.xst"/>
-    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="Memoria_de_Instrucoes.prj"/>
-    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="Memoria_de_Instrucoes.stx"/>
-    <file xil_pn:fileType="FILE_XST" xil_pn:name="Memoria_de_Instrucoes.xst"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="Memoria_de_Dados.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="Memoria_de_Dados.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="Memoria_de_Dados.xst"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="NOR_Operando.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="NOR_Operando.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="NOR_Operando.xst"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="PC.prj"/>
     <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="PC.stx"/>
     <file xil_pn:fileType="FILE_XST" xil_pn:name="PC.xst"/>
@@ -52,9 +52,6 @@
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="Processador.prj"/>
     <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="Processador.stx"/>
     <file xil_pn:fileType="FILE_XST" xil_pn:name="Processador.xst"/>
-    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="ROM_de_Descodificacao.prj"/>
-    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="ROM_de_Descodificacao.stx"/>
-    <file xil_pn:fileType="FILE_XST" xil_pn:name="ROM_de_Descodificacao.xst"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="Registo_Flags.prj"/>
     <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="Registo_Flags.stx"/>
     <file xil_pn:fileType="FILE_XST" xil_pn:name="Registo_Flags.xst"/>
@@ -63,51 +60,46 @@
   </files>
 
   <transforms xmlns="http://www.xilinx.com/XMLSchema">
-    <transform xil_pn:end_ts="1709741192" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1709741192">
+    <transform xil_pn:end_ts="1710156679" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1710156679">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1709742411" xil_pn:in_ck="-7308150511194927979" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1709742411">
+    <transform xil_pn:end_ts="1710156980" xil_pn:in_ck="6302372514137214470" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1710156980">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="InputAdded"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="InputChanged"/>
-      <outfile xil_pn:name="ALU.vhd"/>
-      <outfile xil_pn:name="Banco_de_Registos.vhd"/>
-      <outfile xil_pn:name="MUX_PC.vhd"/>
-      <outfile xil_pn:name="MUX_R.vhd"/>
-      <outfile xil_pn:name="Memoria_de_Dados.vhd"/>
-      <outfile xil_pn:name="Memoria_de_Instrucoes.vhd"/>
-      <outfile xil_pn:name="NOR_Operando.vhd"/>
-      <outfile xil_pn:name="PC.vhd"/>
-      <outfile xil_pn:name="Periferico_de_Entrada.vhd"/>
-      <outfile xil_pn:name="Periferico_de_Saida.vhd"/>
-      <outfile xil_pn:name="Placa_Mae.vhd"/>
-      <outfile xil_pn:name="Processador.vhd"/>
-      <outfile xil_pn:name="ROM_de_Descodificacao.vhd"/>
-      <outfile xil_pn:name="Registo_Flags.vhd"/>
-      <outfile xil_pn:name="Test_ALU.vhd"/>
-      <outfile xil_pn:name="Test_Banco_de_Registos.vhd"/>
-      <outfile xil_pn:name="Test_MUX_R.vhd"/>
-      <outfile xil_pn:name="Test_Memoria_de_Instrucoes.vhd"/>
-      <outfile xil_pn:name="Test_PC.vhd"/>
-      <outfile xil_pn:name="Test_Periferico_de_Entrada.vhd"/>
-      <outfile xil_pn:name="Test_Periferico_de_Saida.vhd"/>
-      <outfile xil_pn:name="Test_ROM.vhd"/>
-      <outfile xil_pn:name="Test_Registo_Flags.vhd"/>
+      <status xil_pn:value="InputRemoved"/>
+      <status xil_pn:value="OutputRemoved"/>
     </transform>
-    <transform xil_pn:end_ts="1709741192" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-9044832904953873877" xil_pn:start_ts="1709741192">
+    <transform xil_pn:end_ts="1710156980" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="4932656488258205032" xil_pn:start_ts="1710156980">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1709741192" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="2623569966022418569" xil_pn:start_ts="1709741192">
+    <transform xil_pn:end_ts="1710156980" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="5953529457568276294" xil_pn:start_ts="1710156980">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1709741192" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="-6886274870255273930" xil_pn:start_ts="1709741192">
+    <transform xil_pn:end_ts="1710156679" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="-6886274870255273930" xil_pn:start_ts="1710156679">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1710156980" xil_pn:in_ck="6302372514137214470" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1710156980">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputRemoved"/>
+      <status xil_pn:value="OutputRemoved"/>
+    </transform>
+    <transform xil_pn:end_ts="1710156984" xil_pn:in_ck="6302372514137214470" xil_pn:name="TRAN_MSimulateBehavioralModel" xil_pn:prop_ck="-5673950085260640520" xil_pn:start_ts="1710156980">
+      <status xil_pn:value="FailedRun"/>
+      <status xil_pn:value="NotReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="InputRemoved"/>
     </transform>
   </transforms>
 

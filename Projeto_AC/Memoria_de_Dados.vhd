@@ -16,7 +16,7 @@ begin
 
 	process(Constante, WR, clk, Operando1)
 	type memoria is array (0 to 255) of STD_LOGIC_VECTOR (7 downto 0); -- guardar os dados
-	variable Mem : memoria 
+	variable Mem : memoria ;
 	begin
 	
 		-- Se está na transição ascendente do relógio
@@ -25,7 +25,7 @@ begin
 			if WR = '1' then
 			
 				-- Guarda os dados do Operando1 na posição de memória indicada pelo sinal de entrada Constante
-				Mem(to_integer(unsigned(Constante))) <= Operando1;
+				Mem(to_integer(unsigned(Constante))) := Operando1;
 				
 			end if;
 			
