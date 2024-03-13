@@ -11,7 +11,6 @@ entity MUX_R is
 end MUX_R;
 
 architecture Behavioral of MUX_R is
-
 begin
 
 	process(SEL_Dados, Constante, Dados_M, Dados_IN, Resultado)

@@ -15,10 +15,8 @@ architecture Behavioral of PC is
 begin
 
 	process(clk, reset, ESCR_PC, Constante)
-	
 	-- Declaração da variavel contagem
-   variable contagem : STD_LOGIC_VECTOR (7 downto 0) := "00000000";
-	
+	variable contagem : STD_LOGIC_VECTOR (7 downto 0) := "00000000";
    begin
 
 		-- Se está na transição ascendente do relógio
@@ -30,7 +28,7 @@ begin
 				-- Se o sinal do ESCR_PC for 0 aumenta em um o valor da variável contagem
 				if ESCR_PC = '0' then
 					
-					contagem := contagem + 1;
+					contagem := contagem + "00000001";
 				
 				-- Se o sinal do ESCR_PC for 1 atribui o valor da entrada Constante á variável contagem
 				else 

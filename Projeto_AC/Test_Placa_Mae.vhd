@@ -74,6 +74,8 @@ BEGIN
 		reset <= '1'; wait for clk_period*2;
 		reset <= '0'; PIN <= "11110110"; wait for clk_period*44; 
 		reset <= '1'; wait for clk_period*2;
+		reset <= '0'; PIN <= "10000000"; wait for clk_period*44; 
+		reset <= '1'; wait for clk_period*2;
 		reset <= '0'; PIN <= "00000000"; wait for clk_period*44;
 		reset <= '1'; wait for clk_period*2;
 		reset <= '0'; PIN <= "00000001"; wait for clk_period*44;

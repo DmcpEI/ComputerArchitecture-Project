@@ -95,7 +95,14 @@ Component Periferico_de_Saida is
 end Component;
 
 Component NOR_Operando is
-    Port ( Operando1 : in  STD_LOGIC_VECTOR (7 downto 0);
+    Port ( O0 : in  STD_LOGIC;
+			  O1 : in  STD_LOGIC;
+			  O2 : in  STD_LOGIC;
+			  O3 : in  STD_LOGIC;
+			  O4 : in  STD_LOGIC;
+			  O5 : in  STD_LOGIC;
+			  O6 : in  STD_LOGIC;
+			  O7 : in  STD_LOGIC;
            NOR_Operando1 : out  STD_LOGIC);
 end Component;
 
@@ -117,7 +124,7 @@ begin
 	ALU_P : ALU port map (SEL_ALU, Sinal_Operando1, Operando2, E_FLAG, Resultado);
 	Periferico_de_Entrada_P : Periferico_de_Entrada port map (ESCR_P, PIN, Dados_IN);
 	Periferico_de_Saida_P : Periferico_de_Saida port map (Sinal_Operando1, ESCR_P, clk, POUT);
-	NOR_Operando_P : NOR_Operando port map (Sinal_Operando1, NOR_Operando1);
+	NOR_Operando_P : NOR_Operando port map (Sinal_Operando1(0), Sinal_Operando1(1), Sinal_Operando1(2), Sinal_Operando1(3), Sinal_Operando1(4), Sinal_Operando1(5), Sinal_Operando1(6), Sinal_Operando1(7), NOR_Operando1);
 	
 	Constante_OUT <= Constante_IN;
 	Operando1 <= Sinal_Operando1;

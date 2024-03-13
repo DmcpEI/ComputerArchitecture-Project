@@ -2,24 +2,24 @@ Command line:
    Test_Placa_Mae_isim_beh.exe
      -simmode  gui
      -simrunnum  0
-     -socket  38724
+     -socket  58284
 
-Tue Mar 12 18:45:17 2024
+Wed Mar 13 15:59:48 2024
 
 
- Elaboration Time: 0.21 sec
+ Elaboration Time: 0.41 sec
 
- Current Memory Usage: 216.064 Meg
+ Current Memory Usage: 217.424 Meg
 
  Total Signals          : 113
- Total Nets             : 199
- Total Signal Drivers   : 35
- Total Blocks           : 19
- Total Primitive Blocks : 16
+ Total Nets             : 2183
+ Total Signal Drivers   : 28
+ Total Blocks           : 20
+ Total Primitive Blocks : 17
  Total Processes        : 16
  Total Traceable Variables  : 16
- Total Scalar Nets and Variables : 701
-Total Line Count : 195
+ Total Scalar Nets and Variables : 2685
+Total Line Count : 170
 
 ** Failure:Todos os testes foram executados.
 User(VHDL) Code Called Simulation Stop
@@ -27,9 +27,9 @@ In process Test_Placa_Mae.vhd:stim_proc
  
 
 
- Total Simulation Time: 0.32 sec
+ Total Simulation Time: 0.77 sec
 
- Current Memory Usage: 293.663 Meg
+ Current Memory Usage: 295.023 Meg
 
-Tue Mar 12 18:45:32 2024
+Wed Mar 13 16:00:55 2024
 
