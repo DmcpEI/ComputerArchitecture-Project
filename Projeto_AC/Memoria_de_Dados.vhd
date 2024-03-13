@@ -12,7 +12,8 @@ end Memoria_de_Dados;
 
 architecture Behavioral of Memoria_de_Dados is
 
-type memoria is array (0 to 255) of STD_LOGIC_VECTOR (7 downto 0); -- Guardar os dados
+-- Array de memória com 256 posições, que sºao todos os valores possíveis da Constante
+type memoria is array (0 to 255) of STD_LOGIC_VECTOR (7 downto 0);
 signal Mem : memoria;
 
 begin

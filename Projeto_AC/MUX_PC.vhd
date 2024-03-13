@@ -5,7 +5,7 @@ entity MUX_PC is
     Port ( zero : in  STD_LOGIC;
            um : in  STD_LOGIC;
            S_FLAG : in  STD_LOGIC;
-           Operando1 : in  STD_LOGIC_VECTOR (7 downto 0);
+           O7 : in  STD_LOGIC;
            SEL_PC : in  STD_LOGIC_VECTOR (2 downto 0);
 			  NOR_Operando1 : in STD_LOGIC;
            ESCR_PC : out  STD_LOGIC);
@@ -15,7 +15,7 @@ architecture Behavioral of MUX_PC is
 
 begin
 
-	process(zero, um, S_FLAG, Operando1, SEL_PC, NOR_Operando1)
+	process(zero, um, S_FLAG, O7, SEL_PC, NOR_Operando1)
 	begin
 	
 		-- Início da estrutura de seleção de casos dependendo do valor de SEL_PC
@@ -25,7 +25,7 @@ begin
 			when "000" => ESCR_PC <= zero;
 			when "001" => ESCR_PC <= um;
 			when "010" => ESCR_PC <= S_FLAG;
-			when "011" => ESCR_PC <= Operando1(7);
+			when "011" => ESCR_PC <= O7;
 			when "100" => ESCR_PC <= NOR_Operando1;
 			-- Para qualquer outro valor de SEL_PC, atribui 'X' a ESCR_PC
 			when others => ESCR_PC <= 'X';

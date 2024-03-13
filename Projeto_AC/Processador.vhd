@@ -30,7 +30,7 @@ Component MUX_PC is
     Port ( zero : in  STD_LOGIC;
            um : in  STD_LOGIC;
            S_FLAG : in  STD_LOGIC;
-           Operando1 : in  STD_LOGIC_VECTOR (7 downto 0);
+           O7 : in  STD_LOGIC;
            SEL_PC : in  STD_LOGIC_VECTOR (2 downto 0);
 			  NOR_Operando1 : in STD_LOGIC;
            ESCR_PC : out  STD_LOGIC);
@@ -116,7 +116,7 @@ signal Sinal_Operando1, Operando2, Resultado, Dados_R, Dados_IN : STD_LOGIC_VECT
 begin
 	
 	PC_P : PC port map (clk, reset, Constante_IN, ESCR_PC, Endereco);
-	MUX_PC_P : MUX_PC port map ('0', '1', S_FLAG, Sinal_Operando1, SEL_PC, NOR_Operando1, ESCR_PC);
+	MUX_PC_P : MUX_PC port map ('0', '1', S_FLAG, Sinal_Operando1(7), SEL_PC, NOR_Operando1, ESCR_PC);
 	Registo_Flags_P : Registo_Flags port map (clk, E_FLAG, ESCR_R, SEL_FLAG, S_FLAG);
 	ROM_de_Descodificacao_P : ROM_de_Descodificacao port map (opcode, WR, ESCR_P, SEL_Dados, ESCR_R, SEL_ALU, SEL_FLAG, SEL_PC);
 	MUX_R_P : MUX_R port map (SEL_Dados, Constante_IN, Dados_M, Dados_IN, Resultado, Dados_R);

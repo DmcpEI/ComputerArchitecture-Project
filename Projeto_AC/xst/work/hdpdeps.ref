@@ -1,0 +1,88 @@
+V3 55
+FL /home/ise/Projects/Projeto_AC/ALU.vhd 2024/03/12.21:29:17 P.20131013
+EN work/ALU 1710350157 FL /home/ise/Projects/Projeto_AC/ALU.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_SIGNED 1381692178 \
+      PB ieee/std_logic_arith 1381692177
+AR work/ALU/Behavioral 1710350158 \
+      FL /home/ise/Projects/Projeto_AC/ALU.vhd EN work/ALU 1710350157
+FL /home/ise/Projects/Projeto_AC/Banco_de_Registos.vhd 2024/03/12.19:53:06 P.20131013
+EN work/Banco_de_Registos 1710350155 \
+      FL /home/ise/Projects/Projeto_AC/Banco_de_Registos.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
+AR work/Banco_de_Registos/Behavioral 1710350156 \
+      FL /home/ise/Projects/Projeto_AC/Banco_de_Registos.vhd \
+      EN work/Banco_de_Registos 1710350155
+FL /home/ise/Projects/Projeto_AC/Memoria_de_Dados.vhd 2024/03/12.19:06:32 P.20131013
+EN work/Memoria_de_Dados 1710350167 \
+      FL /home/ise/Projects/Projeto_AC/Memoria_de_Dados.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
+AR work/Memoria_de_Dados/Behavioral 1710350168 \
+      FL /home/ise/Projects/Projeto_AC/Memoria_de_Dados.vhd \
+      EN work/Memoria_de_Dados 1710350167
+FL /home/ise/Projects/Projeto_AC/Memoria_de_Instrucoes.vhd 2024/03/12.17:56:36 P.20131013
+EN work/Memoria_de_Instrucoes 1710350169 \
+      FL /home/ise/Projects/Projeto_AC/Memoria_de_Instrucoes.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/Memoria_de_Instrucoes/Behavioral 1710350170 \
+      FL /home/ise/Projects/Projeto_AC/Memoria_de_Instrucoes.vhd \
+      EN work/Memoria_de_Instrucoes 1710350169
+FL /home/ise/Projects/Projeto_AC/MUX_PC.vhd 2024/03/13.16:47:30 P.20131013
+EN work/MUX_PC 1710350147 FL /home/ise/Projects/Projeto_AC/MUX_PC.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/MUX_PC/Behavioral 1710350148 \
+      FL /home/ise/Projects/Projeto_AC/MUX_PC.vhd EN work/MUX_PC 1710350147
+FL /home/ise/Projects/Projeto_AC/MUX_R.vhd 2024/03/12.20:48:58 P.20131013
+EN work/MUX_R 1710350153 FL /home/ise/Projects/Projeto_AC/MUX_R.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/MUX_R/Behavioral 1710350154 \
+      FL /home/ise/Projects/Projeto_AC/MUX_R.vhd EN work/MUX_R 1710350153
+FL /home/ise/Projects/Projeto_AC/NOR_Operando.vhd 2024/03/12.21:15:55 P.20131013
+EN work/NOR_Operando 1710350163 FL /home/ise/Projects/Projeto_AC/NOR_Operando.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/NOR_Operando/DataFlow 1710350164 \
+      FL /home/ise/Projects/Projeto_AC/NOR_Operando.vhd EN work/NOR_Operando 1710350163
+FL /home/ise/Projects/Projeto_AC/PC.vhd 2024/03/12.21:33:56 P.20131013
+EN work/PC 1710350145 FL /home/ise/Projects/Projeto_AC/PC.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179
+AR work/PC/Behavioral 1710350146 \
+      FL /home/ise/Projects/Projeto_AC/PC.vhd EN work/PC 1710350145
+FL /home/ise/Projects/Projeto_AC/Periferico_de_Entrada.vhd 2024/03/12.20:01:26 P.20131013
+EN work/Periferico_de_Entrada 1710350159 \
+      FL /home/ise/Projects/Projeto_AC/Periferico_de_Entrada.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/Periferico_de_Entrada/Behavioral 1710350160 \
+      FL /home/ise/Projects/Projeto_AC/Periferico_de_Entrada.vhd \
+      EN work/Periferico_de_Entrada 1710350159
+FL /home/ise/Projects/Projeto_AC/Periferico_de_Saida.vhd 2024/03/11.14:07:16 P.20131013
+EN work/Periferico_de_Saida 1710350161 \
+      FL /home/ise/Projects/Projeto_AC/Periferico_de_Saida.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/Periferico_de_Saida/Behavioral 1710350162 \
+      FL /home/ise/Projects/Projeto_AC/Periferico_de_Saida.vhd \
+      EN work/Periferico_de_Saida 1710350161
+FL /home/ise/Projects/Projeto_AC/Placa_Mae.vhd 2024/03/11.12:40:33 P.20131013
+EN work/Placa_Mae 1710350171 FL /home/ise/Projects/Projeto_AC/Placa_Mae.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/Placa_Mae/Struct 1710350172 \
+      FL /home/ise/Projects/Projeto_AC/Placa_Mae.vhd EN work/Placa_Mae 1710350171 \
+      CP Processador CP Memoria_de_Dados CP Memoria_de_Instrucoes
+FL /home/ise/Projects/Projeto_AC/Processador.vhd 2024/03/13.16:46:35 P.20131013
+EN work/Processador 1710350165 FL /home/ise/Projects/Projeto_AC/Processador.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/Processador/Struct 1710350166 \
+      FL /home/ise/Projects/Projeto_AC/Processador.vhd EN work/Processador 1710350165 \
+      CP PC CP MUX_PC CP Registo_Flags CP ROM_de_Descodificacao CP MUX_R \
+      CP Banco_de_Registos CP ALU CP Periferico_de_Entrada CP Periferico_de_Saida \
+      CP NOR_Operando
+FL /home/ise/Projects/Projeto_AC/Registo_Flags.vhd 2024/03/12.20:41:39 P.20131013
+EN work/Registo_Flags 1710350149 \
+      FL /home/ise/Projects/Projeto_AC/Registo_Flags.vhd PB ieee/std_logic_1164 1381692176
+AR work/Registo_Flags/Behavioral 1710350150 \
+      FL /home/ise/Projects/Projeto_AC/Registo_Flags.vhd EN work/Registo_Flags 1710350149
+FL /home/ise/Projects/Projeto_AC/ROM_de_Descodificacao.vhd 2024/03/11.12:03:51 P.20131013
+EN work/ROM_de_Descodificacao 1710350151 \
+      FL /home/ise/Projects/Projeto_AC/ROM_de_Descodificacao.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/ROM_de_Descodificacao/Behavioral 1710350152 \
+      FL /home/ise/Projects/Projeto_AC/ROM_de_Descodificacao.vhd \
+      EN work/ROM_de_Descodificacao 1710350151

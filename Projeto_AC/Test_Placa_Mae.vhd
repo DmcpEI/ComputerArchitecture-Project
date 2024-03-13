@@ -52,31 +52,42 @@ BEGIN
    -- Stimulus process
    stim_proc: process
    begin		
-	
+		
+		-- PIN a -128
+		reset <= '0'; PIN <= "10000000"; wait for clk_period*44; 
 		reset <= '1'; wait for clk_period*2;
-		reset <= '0'; PIN <= "11111111"; wait for clk_period*44; 
-		reset <= '1'; wait for clk_period*2;
-		reset <= '0'; PIN <= "11111110"; wait for clk_period*44; 
-		reset <= '1'; wait for clk_period*2;
-		reset <= '0'; PIN <= "11111101"; wait for clk_period*44; 
-		reset <= '1'; wait for clk_period*2;
-		reset <= '0'; PIN <= "11111100"; wait for clk_period*44; 
-		reset <= '1'; wait for clk_period*2;
-		reset <= '0'; PIN <= "11111011"; wait for clk_period*44; 
-		reset <= '1'; wait for clk_period*2;
-		reset <= '0'; PIN <= "11111010"; wait for clk_period*44; 
-		reset <= '1'; wait for clk_period*2;
-		reset <= '0'; PIN <= "11111001"; wait for clk_period*44; 
-		reset <= '1'; wait for clk_period*2;
-		reset <= '0'; PIN <= "11111000"; wait for clk_period*44; 
-		reset <= '1'; wait for clk_period*2;
-		reset <= '0'; PIN <= "11110111"; wait for clk_period*44; 
+		
+		-- PIN a -20 e menos
+		
+		-- PIN no mínimo possível e quando dá overflow
+		
+		-- PIN de -10 a -1
 		reset <= '1'; wait for clk_period*2;
 		reset <= '0'; PIN <= "11110110"; wait for clk_period*44; 
 		reset <= '1'; wait for clk_period*2;
-		reset <= '0'; PIN <= "10000000"; wait for clk_period*44; 
+		reset <= '0'; PIN <= "11110111"; wait for clk_period*44; 
+		reset <= '1'; wait for clk_period*2;
+		reset <= '0'; PIN <= "11111000"; wait for clk_period*44; 
+		reset <= '1'; wait for clk_period*2;
+		reset <= '0'; PIN <= "11111001"; wait for clk_period*44;
+		reset <= '1'; wait for clk_period*2;
+		reset <= '0'; PIN <= "11111010"; wait for clk_period*44; 
+		reset <= '1'; wait for clk_period*2;
+		reset <= '0'; PIN <= "11111011"; wait for clk_period*44;
+		reset <= '1'; wait for clk_period*2;
+		reset <= '0'; PIN <= "11111100"; wait for clk_period*44;  
+		reset <= '1'; wait for clk_period*2;
+		reset <= '0'; PIN <= "11111101"; wait for clk_period*44; 
+		reset <= '1'; wait for clk_period*2;
+		reset <= '0'; PIN <= "11111110"; wait for clk_period*44; 		
+		reset <= '1'; wait for clk_period*2;
+		reset <= '0'; PIN <= "11111111"; wait for clk_period*44; 
+		
+		-- PIN a 0
 		reset <= '1'; wait for clk_period*2;
 		reset <= '0'; PIN <= "00000000"; wait for clk_period*44;
+		
+		-- PIN de 1 a 10
 		reset <= '1'; wait for clk_period*2;
 		reset <= '0'; PIN <= "00000001"; wait for clk_period*44;
 		reset <= '1'; wait for clk_period*2;
@@ -97,6 +108,19 @@ BEGIN
 		reset <= '0'; PIN <= "00001001"; wait for clk_period*44;
 		reset <= '1'; wait for clk_period*2;
 		reset <= '0'; PIN <= "00001010"; wait for clk_period*44;
+		
+		-- PIN no máximo e quando dá overflow
+		
+		reset <= '1'; wait for clk_period*2;
+		reset <= '0'; PIN <= "00010011"; wait for clk_period*44; --19
+		
+		-- PIN a 20 e mais
+		reset <= '1'; wait for clk_period*2;
+		reset <= '0'; PIN <= "00010100"; wait for clk_period*44;
+		
+		-- PIN a 127
+		reset <= '1'; wait for clk_period*2;
+		reset <= '0'; PIN <= "01111111"; wait for clk_period*44;
       
 		assert false report "Todos os testes foram executados." severity failure;
    end process;

@@ -5,38 +5,33 @@ Parameter TMPDIR set to xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.19 secs
+Total CPU time to Xst completion: 0.24 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.19 secs
+Total CPU time to Xst completion: 0.24 secs
  
 --> 
 Reading design: Placa_Mae.prj
 
 TABLE OF CONTENTS
   1) Synthesis Options Summary
-  2) HDL Parsing
-  3) HDL Elaboration
-  4) HDL Synthesis
-       4.1) HDL Synthesis Report
-  5) Advanced HDL Synthesis
-       5.1) Advanced HDL Synthesis Report
-  6) Low Level Synthesis
-  7) Partition Report
-  8) Design Summary
-       8.1) Primitive and Black Box Usage
-       8.2) Device utilization summary
-       8.3) Partition Resource Summary
-       8.4) Timing Report
-            8.4.1) Clock Information
-            8.4.2) Asynchronous Control Signals Information
-            8.4.3) Timing Summary
-            8.4.4) Timing Details
-            8.4.5) Cross Clock Domains Report
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
 
 
 =========================================================================
@@ -44,12 +39,13 @@ TABLE OF CONTENTS
 =========================================================================
 ---- Source Parameters
 Input File Name                    : "Placa_Mae.prj"
+Input Format                       : mixed
 Ignore Synthesis Constraint File   : NO
 
 ---- Target Parameters
 Output File Name                   : "Placa_Mae"
 Output Format                      : NGC
-Target Device                      : xc7a100t-3-csg324
+Target Device                      : xc3s500e-4-fg320
 
 ---- Source Options
 Top Module Name                    : Placa_Mae
@@ -60,32 +56,35 @@ FSM Style                          : LUT
 RAM Extraction                     : Yes
 RAM Style                          : Auto
 ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
 Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
 ROM Style                          : Auto
+Mux Extraction                     : Yes
 Resource Sharing                   : YES
 Asynchronous To Synchronous        : NO
-Shift Register Minimum Size        : 2
-Use DSP Block                      : Auto
+Multiplier Style                   : Auto
 Automatic Register Balancing       : No
 
 ---- Target Options
-LUT Combining                      : Auto
-Reduce Control Sets                : Auto
 Add IO Buffers                     : YES
 Global Maximum Fanout              : 100000
-Add Generic Clock Buffer(BUFG)     : 32
+Add Generic Clock Buffer(BUFG)     : 24
 Register Duplication               : YES
+Slice Packing                      : YES
 Optimize Instantiated Primitives   : NO
-Use Clock Enable                   : Auto
-Use Synchronous Set                : Auto
-Use Synchronous Reset              : Auto
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
 Pack IO Registers into IOBs        : Auto
 Equivalent register Removal        : YES
 
 ---- General Options
 Optimization Goal                  : Speed
 Optimization Effort                : 1
-Power Reduction                    : NO
 Keep Hierarchy                     : No
 Netlist Hierarchy                  : As_Optimized
 RTL Output                         : Yes
@@ -98,7 +97,7 @@ Bus Delimiter                      : <>
 Case Specifier                     : Maintain
 Slice Utilization Ratio            : 100
 BRAM Utilization Ratio             : 100
-DSP48 Utilization Ratio            : 100
+Verilog 2001                       : YES
 Auto BRAM Packing                  : NO
 Slice Utilization Ratio Delta      : 5
 
@@ -106,228 +105,242 @@ Slice Utilization Ratio Delta      : 5
 
 
 =========================================================================
-*                          HDL Parsing                                  *
+*                          HDL Compilation                              *
 =========================================================================
-Parsing VHDL file "/home/ise/Projects/Projeto_AC/ROM_de_Descodificacao.vhd" into library work
-Parsing entity <ROM_de_Descodificacao>.
-Parsing architecture <Behavioral> of entity <rom_de_descodificacao>.
-Parsing VHDL file "/home/ise/Projects/Projeto_AC/Registo_Flags.vhd" into library work
-Parsing entity <Registo_Flags>.
-Parsing architecture <Behavioral> of entity <registo_flags>.
-Parsing VHDL file "/home/ise/Projects/Projeto_AC/Periferico_de_Saida.vhd" into library work
-Parsing entity <Periferico_de_Saida>.
-Parsing architecture <Behavioral> of entity <periferico_de_saida>.
-Parsing VHDL file "/home/ise/Projects/Projeto_AC/Periferico_de_Entrada.vhd" into library work
-Parsing entity <Periferico_de_Entrada>.
-Parsing architecture <Behavioral> of entity <periferico_de_entrada>.
-Parsing VHDL file "/home/ise/Projects/Projeto_AC/PC.vhd" into library work
-Parsing entity <PC>.
-Parsing architecture <Behavioral> of entity <pc>.
-Parsing VHDL file "/home/ise/Projects/Projeto_AC/NOR_Operando.vhd" into library work
-Parsing entity <NOR_Operando>.
-Parsing architecture <Behavioral> of entity <nor_operando>.
-Parsing VHDL file "/home/ise/Projects/Projeto_AC/MUX_R.vhd" into library work
-Parsing entity <MUX_R>.
-Parsing architecture <Behavioral> of entity <mux_r>.
-Parsing VHDL file "/home/ise/Projects/Projeto_AC/MUX_PC.vhd" into library work
-Parsing entity <MUX_PC>.
-Parsing architecture <Behavioral> of entity <mux_pc>.
-Parsing VHDL file "/home/ise/Projects/Projeto_AC/Banco_de_Registos.vhd" into library work
-Parsing entity <Banco_de_Registos>.
-Parsing architecture <Behavioral> of entity <banco_de_registos>.
-Parsing VHDL file "/home/ise/Projects/Projeto_AC/ALU.vhd" into library work
-Parsing entity <ALU>.
-Parsing architecture <Behavioral> of entity <alu>.
-Parsing VHDL file "/home/ise/Projects/Projeto_AC/Processador.vhd" into library work
-Parsing entity <Processador>.
-Parsing architecture <Struct> of entity <processador>.
-Parsing VHDL file "/home/ise/Projects/Projeto_AC/Memoria_de_Instrucoes.vhd" into library work
-Parsing entity <Memoria_de_Instrucoes>.
-Parsing architecture <Behavioral> of entity <memoria_de_instrucoes>.
-Parsing VHDL file "/home/ise/Projects/Projeto_AC/Memoria_de_Dados.vhd" into library work
-Parsing entity <Memoria_de_Dados>.
-Parsing architecture <Behavioral> of entity <memoria_de_dados>.
-Parsing VHDL file "/home/ise/Projects/Projeto_AC/Placa_Mae.vhd" into library work
-Parsing entity <Placa_Mae>.
-Parsing architecture <Struct> of entity <placa_mae>.
+Compiling vhdl file "/home/ise/Projects/Projeto_AC/PC.vhd" in Library work.
+Entity <PC> compiled.
+Entity <PC> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "/home/ise/Projects/Projeto_AC/MUX_PC.vhd" in Library work.
+Entity <MUX_PC> compiled.
+Entity <MUX_PC> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "/home/ise/Projects/Projeto_AC/Registo_Flags.vhd" in Library work.
+Entity <Registo_Flags> compiled.
+Entity <Registo_Flags> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "/home/ise/Projects/Projeto_AC/ROM_de_Descodificacao.vhd" in Library work.
+Entity <ROM_de_Descodificacao> compiled.
+Entity <ROM_de_Descodificacao> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "/home/ise/Projects/Projeto_AC/MUX_R.vhd" in Library work.
+Entity <MUX_R> compiled.
+Entity <MUX_R> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "/home/ise/Projects/Projeto_AC/Banco_de_Registos.vhd" in Library work.
+Entity <Banco_de_Registos> compiled.
+Entity <Banco_de_Registos> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "/home/ise/Projects/Projeto_AC/ALU.vhd" in Library work.
+Entity <ALU> compiled.
+Entity <ALU> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "/home/ise/Projects/Projeto_AC/Periferico_de_Entrada.vhd" in Library work.
+Entity <Periferico_de_Entrada> compiled.
+Entity <Periferico_de_Entrada> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "/home/ise/Projects/Projeto_AC/Periferico_de_Saida.vhd" in Library work.
+Entity <Periferico_de_Saida> compiled.
+Entity <Periferico_de_Saida> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "/home/ise/Projects/Projeto_AC/NOR_Operando.vhd" in Library work.
+Entity <NOR_Operando> compiled.
+Entity <NOR_Operando> (Architecture <DataFlow>) compiled.
+Compiling vhdl file "/home/ise/Projects/Projeto_AC/Processador.vhd" in Library work.
+Entity <Processador> compiled.
+Entity <Processador> (Architecture <Struct>) compiled.
+Compiling vhdl file "/home/ise/Projects/Projeto_AC/Memoria_de_Dados.vhd" in Library work.
+Entity <Memoria_de_Dados> compiled.
+Entity <Memoria_de_Dados> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "/home/ise/Projects/Projeto_AC/Memoria_de_Instrucoes.vhd" in Library work.
+Entity <Memoria_de_Instrucoes> compiled.
+Entity <Memoria_de_Instrucoes> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "/home/ise/Projects/Projeto_AC/Placa_Mae.vhd" in Library work.
+Entity <Placa_Mae> compiled.
+Entity <Placa_Mae> (Architecture <Struct>) compiled.
 
 =========================================================================
-*                            HDL Elaboration                            *
+*                     Design Hierarchy Analysis                         *
 =========================================================================
+Analyzing hierarchy for entity <Placa_Mae> in library <work> (architecture <Struct>).
 
-Elaborating entity <Placa_Mae> (architecture <Struct>) from library <work>.
+Analyzing hierarchy for entity <Processador> in library <work> (architecture <Struct>).
 
-Elaborating entity <Processador> (architecture <Struct>) from library <work>.
+Analyzing hierarchy for entity <Memoria_de_Dados> in library <work> (architecture <Behavioral>).
 
-Elaborating entity <PC> (architecture <Behavioral>) from library <work>.
+Analyzing hierarchy for entity <Memoria_de_Instrucoes> in library <work> (architecture <Behavioral>).
 
-Elaborating entity <MUX_PC> (architecture <Behavioral>) from library <work>.
+Analyzing hierarchy for entity <PC> in library <work> (architecture <Behavioral>).
 
-Elaborating entity <Registo_Flags> (architecture <Behavioral>) from library <work>.
+Analyzing hierarchy for entity <MUX_PC> in library <work> (architecture <Behavioral>).
 
-Elaborating entity <ROM_de_Descodificacao> (architecture <Behavioral>) from library <work>.
+Analyzing hierarchy for entity <Registo_Flags> in library <work> (architecture <Behavioral>).
 
-Elaborating entity <MUX_R> (architecture <Behavioral>) from library <work>.
-INFO:HDLCompiler:679 - "/home/ise/Projects/Projeto_AC/MUX_R.vhd" Line 29. Case statement is complete. others clause is never selected
+Analyzing hierarchy for entity <ROM_de_Descodificacao> in library <work> (architecture <Behavioral>).
 
-Elaborating entity <Banco_de_Registos> (architecture <Behavioral>) from library <work>.
-INFO:HDLCompiler:679 - "/home/ise/Projects/Projeto_AC/Banco_de_Registos.vhd" Line 42. Case statement is complete. others clause is never selected
-WARNING:HDLCompiler:92 - "/home/ise/Projects/Projeto_AC/Banco_de_Registos.vhd" Line 56: r0 should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/ise/Projects/Projeto_AC/Banco_de_Registos.vhd" Line 57: r1 should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/ise/Projects/Projeto_AC/Banco_de_Registos.vhd" Line 58: r2 should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/ise/Projects/Projeto_AC/Banco_de_Registos.vhd" Line 59: r3 should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/ise/Projects/Projeto_AC/Banco_de_Registos.vhd" Line 60: r4 should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/ise/Projects/Projeto_AC/Banco_de_Registos.vhd" Line 61: r5 should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/ise/Projects/Projeto_AC/Banco_de_Registos.vhd" Line 62: r6 should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/ise/Projects/Projeto_AC/Banco_de_Registos.vhd" Line 63: r7 should be on the sensitivity list of the process
-INFO:HDLCompiler:679 - "/home/ise/Projects/Projeto_AC/Banco_de_Registos.vhd" Line 65. Case statement is complete. others clause is never selected
-WARNING:HDLCompiler:92 - "/home/ise/Projects/Projeto_AC/Banco_de_Registos.vhd" Line 73: r0 should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/ise/Projects/Projeto_AC/Banco_de_Registos.vhd" Line 74: r1 should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/ise/Projects/Projeto_AC/Banco_de_Registos.vhd" Line 75: r2 should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/ise/Projects/Projeto_AC/Banco_de_Registos.vhd" Line 76: r3 should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/ise/Projects/Projeto_AC/Banco_de_Registos.vhd" Line 77: r4 should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/ise/Projects/Projeto_AC/Banco_de_Registos.vhd" Line 78: r5 should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/ise/Projects/Projeto_AC/Banco_de_Registos.vhd" Line 79: r6 should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/ise/Projects/Projeto_AC/Banco_de_Registos.vhd" Line 80: r7 should be on the sensitivity list of the process
-INFO:HDLCompiler:679 - "/home/ise/Projects/Projeto_AC/Banco_de_Registos.vhd" Line 82. Case statement is complete. others clause is never selected
+Analyzing hierarchy for entity <MUX_R> in library <work> (architecture <Behavioral>).
 
-Elaborating entity <ALU> (architecture <Behavioral>) from library <work>.
+Analyzing hierarchy for entity <Banco_de_Registos> in library <work> (architecture <Behavioral>).
 
-Elaborating entity <Periferico_de_Entrada> (architecture <Behavioral>) from library <work>.
+Analyzing hierarchy for entity <ALU> in library <work> (architecture <Behavioral>).
 
-Elaborating entity <Periferico_de_Saida> (architecture <Behavioral>) from library <work>.
+Analyzing hierarchy for entity <Periferico_de_Entrada> in library <work> (architecture <Behavioral>).
 
-Elaborating entity <NOR_Operando> (architecture <Behavioral>) from library <work>.
+Analyzing hierarchy for entity <Periferico_de_Saida> in library <work> (architecture <Behavioral>).
 
-Elaborating entity <Memoria_de_Dados> (architecture <Behavioral>) from library <work>.
+Analyzing hierarchy for entity <NOR_Operando> in library <work> (architecture <DataFlow>).
 
-Elaborating entity <Memoria_de_Instrucoes> (architecture <Behavioral>) from library <work>.
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <Placa_Mae> in library <work> (Architecture <Struct>).
+Entity <Placa_Mae> analyzed. Unit <Placa_Mae> generated.
+
+Analyzing Entity <Processador> in library <work> (Architecture <Struct>).
+Entity <Processador> analyzed. Unit <Processador> generated.
+
+Analyzing Entity <PC> in library <work> (Architecture <Behavioral>).
+Entity <PC> analyzed. Unit <PC> generated.
+
+Analyzing Entity <MUX_PC> in library <work> (Architecture <Behavioral>).
+Entity <MUX_PC> analyzed. Unit <MUX_PC> generated.
+
+Analyzing Entity <Registo_Flags> in library <work> (Architecture <Behavioral>).
+Entity <Registo_Flags> analyzed. Unit <Registo_Flags> generated.
+
+Analyzing Entity <ROM_de_Descodificacao> in library <work> (Architecture <Behavioral>).
+Entity <ROM_de_Descodificacao> analyzed. Unit <ROM_de_Descodificacao> generated.
+
+Analyzing Entity <MUX_R> in library <work> (Architecture <Behavioral>).
+INFO:Xst:1561 - "/home/ise/Projects/Projeto_AC/MUX_R.vhd" line 26: Mux is complete : default of case is discarded
+Entity <MUX_R> analyzed. Unit <MUX_R> generated.
+
+Analyzing Entity <Banco_de_Registos> in library <work> (Architecture <Behavioral>).
+Entity <Banco_de_Registos> analyzed. Unit <Banco_de_Registos> generated.
+
+Analyzing Entity <ALU> in library <work> (Architecture <Behavioral>).
+Entity <ALU> analyzed. Unit <ALU> generated.
+
+Analyzing Entity <Periferico_de_Entrada> in library <work> (Architecture <Behavioral>).
+Entity <Periferico_de_Entrada> analyzed. Unit <Periferico_de_Entrada> generated.
+
+Analyzing Entity <Periferico_de_Saida> in library <work> (Architecture <Behavioral>).
+Entity <Periferico_de_Saida> analyzed. Unit <Periferico_de_Saida> generated.
+
+Analyzing Entity <NOR_Operando> in library <work> (Architecture <DataFlow>).
+Entity <NOR_Operando> analyzed. Unit <NOR_Operando> generated.
+
+Analyzing Entity <Memoria_de_Dados> in library <work> (Architecture <Behavioral>).
+WARNING:Xst:819 - "/home/ise/Projects/Projeto_AC/Memoria_de_Dados.vhd" line 20: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <Mem>
+Entity <Memoria_de_Dados> analyzed. Unit <Memoria_de_Dados> generated.
+
+Analyzing Entity <Memoria_de_Instrucoes> in library <work> (Architecture <Behavioral>).
+Entity <Memoria_de_Instrucoes> analyzed. Unit <Memoria_de_Instrucoes> generated.
+
 
 =========================================================================
 *                           HDL Synthesis                               *
 =========================================================================
 
-Synthesizing Unit <Placa_Mae>.
-    Related source file is "/home/ise/Projects/Projeto_AC/Placa_Mae.vhd".
-    Summary:
-	no macro.
-Unit <Placa_Mae> synthesized.
+Performing bidirectional port resolution...
 
-Synthesizing Unit <Processador>.
-    Related source file is "/home/ise/Projects/Projeto_AC/Processador.vhd".
+Synthesizing Unit <Memoria_de_Dados>.
+    Related source file is "/home/ise/Projects/Projeto_AC/Memoria_de_Dados.vhd".
+    Found 256x8-bit single-port RAM <Mram_Mem> for signal <Mem>.
+WARNING:Xst:737 - Found 8-bit latch for signal <Dados_M>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
     Summary:
-	no macro.
-Unit <Processador> synthesized.
+	inferred   1 RAM(s).
+Unit <Memoria_de_Dados> synthesized.
+
+
+Synthesizing Unit <Memoria_de_Instrucoes>.
+    Related source file is "/home/ise/Projects/Projeto_AC/Memoria_de_Instrucoes.vhd".
+    Found 27x5-bit ROM for signal <opcode>.
+    Summary:
+	inferred   1 ROM(s).
+Unit <Memoria_de_Instrucoes> synthesized.
+
 
 Synthesizing Unit <PC>.
     Related source file is "/home/ise/Projects/Projeto_AC/PC.vhd".
     Found 8-bit register for signal <Endereco>.
     Found 8-bit register for signal <contagem>.
-    Found 8-bit adder for signal <contagem[7]_GND_7_o_add_0_OUT> created at line 33.
+    Found 8-bit adder for signal <contagem$addsub0000> created at line 31.
     Summary:
-	inferred   1 Adder/Subtractor(s).
 	inferred  16 D-type flip-flop(s).
-	inferred   2 Multiplexer(s).
+	inferred   1 Adder/Subtractor(s).
 Unit <PC> synthesized.
+
 
 Synthesizing Unit <MUX_PC>.
     Related source file is "/home/ise/Projects/Projeto_AC/MUX_PC.vhd".
-WARNING:Xst:647 - Input <Operando1<6:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 1-bit 5-to-1 multiplexer for signal <ESCR_PC>.
     Summary:
-	no macro.
+	inferred   1 Multiplexer(s).
 Unit <MUX_PC> synthesized.
+
 
 Synthesizing Unit <Registo_Flags>.
     Related source file is "/home/ise/Projects/Projeto_AC/Registo_Flags.vhd".
-WARNING:Xst:647 - Input <ESCR_R<0:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <ESCR_R<0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 1-bit 5-to-1 multiplexer for signal <S_FLAG>.
     Found 5-bit register for signal <registo>.
-    Found 1-bit 5-to-1 multiplexer for signal <S_FLAG> created at line 37.
     Summary:
 	inferred   5 D-type flip-flop(s).
 	inferred   1 Multiplexer(s).
 Unit <Registo_Flags> synthesized.
 
+
 Synthesizing Unit <ROM_de_Descodificacao>.
     Related source file is "/home/ise/Projects/Projeto_AC/ROM_de_Descodificacao.vhd".
-    Found 32x16-bit Read Only RAM for signal <_n0045>
+    Found 16x2-bit ROM for signal <ESCR_R$mux0000>.
     Summary:
-	inferred   1 RAM(s).
+	inferred   1 ROM(s).
 Unit <ROM_de_Descodificacao> synthesized.
+
 
 Synthesizing Unit <MUX_R>.
     Related source file is "/home/ise/Projects/Projeto_AC/MUX_R.vhd".
-    Found 8-bit 4-to-1 multiplexer for signal <Dados_R> created at line 21.
+    Found 8-bit 4-to-1 multiplexer for signal <Dados_R>.
     Summary:
-	inferred   1 Multiplexer(s).
+	inferred   8 Multiplexer(s).
 Unit <MUX_R> synthesized.
+
 
 Synthesizing Unit <Banco_de_Registos>.
     Related source file is "/home/ise/Projects/Projeto_AC/Banco_de_Registos.vhd".
-WARNING:Xst:647 - Input <ESCR_R<1:1>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-    Found 8-bit register for signal <R1>.
-    Found 8-bit register for signal <R2>.
-    Found 8-bit register for signal <R3>.
-    Found 8-bit register for signal <R4>.
-    Found 8-bit register for signal <R5>.
-    Found 8-bit register for signal <R6>.
-    Found 8-bit register for signal <R7>.
-    Found 8-bit register for signal <R0>.
-    Found 8-bit 8-to-1 multiplexer for signal <Operando1> created at line 53.
-    Found 8-bit 8-to-1 multiplexer for signal <Operando2> created at line 70.
+WARNING:Xst:647 - Input <ESCR_R<1>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 8-bit 8-to-1 multiplexer for signal <Operando1>.
+    Found 8-bit 8-to-1 multiplexer for signal <Operando2>.
+    Found 64-bit register for signal <registos>.
     Summary:
 	inferred  64 D-type flip-flop(s).
-	inferred   2 Multiplexer(s).
+	inferred  16 Multiplexer(s).
 Unit <Banco_de_Registos> synthesized.
+
 
 Synthesizing Unit <ALU>.
     Related source file is "/home/ise/Projects/Projeto_AC/ALU.vhd".
-    Found 8-bit adder for signal <Operando1[7]_Operando2[7]_add_0_OUT> created at line 29.
-    Found 8-bit subtractor for signal <GND_15_o_GND_15_o_sub_2_OUT<7:0>> created at line 30.
-    Found 8-bit 9-to-1 multiplexer for signal <Resultado> created at line 26.
-    Found 1-bit 8-to-1 multiplexer for signal <SEL_ALU[3]_operacao[7]_Mux_16_o> created at line 26.
-    Found 1-bit 8-to-1 multiplexer for signal <SEL_ALU[3]_operacao[6]_Mux_18_o> created at line 26.
-    Found 1-bit 8-to-1 multiplexer for signal <SEL_ALU[3]_operacao[5]_Mux_20_o> created at line 26.
-    Found 1-bit 8-to-1 multiplexer for signal <SEL_ALU[3]_operacao[4]_Mux_22_o> created at line 26.
-    Found 1-bit 8-to-1 multiplexer for signal <SEL_ALU[3]_operacao[3]_Mux_24_o> created at line 26.
-    Found 1-bit 8-to-1 multiplexer for signal <SEL_ALU[3]_operacao[2]_Mux_26_o> created at line 26.
-    Found 1-bit 8-to-1 multiplexer for signal <SEL_ALU[3]_operacao[1]_Mux_28_o> created at line 26.
-    Found 1-bit 8-to-1 multiplexer for signal <SEL_ALU[3]_operacao[0]_Mux_30_o> created at line 26.
-WARNING:Xst:737 - Found 1-bit latch for signal <operacao<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <operacao<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <operacao<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <operacao<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <operacao<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <operacao<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <operacao<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <E_FLAG<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <E_FLAG<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <E_FLAG<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <E_FLAG<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <E_FLAG<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <operacao<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-    Found 8-bit comparator greater for signal <Operando1[7]_Operando2[7]_LessThan_9_o> created at line 41
-    Found 8-bit comparator greater for signal <n0013> created at line 44
-    Found 8-bit comparator equal for signal <Operando1[7]_Operando2[7]_equal_12_o> created at line 47
+WARNING:Xst:737 - Found 1-bit latch for signal <E_FLAG_0>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <E_FLAG_1>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <E_FLAG_2>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <E_FLAG_3>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <E_FLAG_4>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 8-bit latch for signal <Resultado>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+    Found 8-bit comparator less for signal <E_FLAG_0$cmp_lt0000> created at line 37.
+    Found 8-bit comparator lessequal for signal <E_FLAG_1$cmp_le0000> created at line 40.
+    Found 8-bit comparator equal for signal <E_FLAG_2$cmp_eq0000> created at line 43.
+    Found 8-bit comparator greatequal for signal <E_FLAG_3$cmp_ge0000> created at line 46.
+    Found 8-bit comparator greater for signal <E_FLAG_4$cmp_gt0000> created at line 49.
+    Found 8-bit addsub for signal <Resultado$addsub0000>.
+    Found 8-bit 8-to-1 multiplexer for signal <Resultado$mux0001>.
+    Found 8-bit xor2 for signal <Resultado$xor0000> created at line 31.
     Summary:
-	inferred   2 Adder/Subtractor(s).
-	inferred  13 Latch(s).
-	inferred   3 Comparator(s).
-	inferred   9 Multiplexer(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred   5 Comparator(s).
+	inferred   8 Multiplexer(s).
 Unit <ALU> synthesized.
+
 
 Synthesizing Unit <Periferico_de_Entrada>.
     Related source file is "/home/ise/Projects/Projeto_AC/Periferico_de_Entrada.vhd".
-WARNING:Xst:737 - Found 1-bit latch for signal <Dados_IN<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <Dados_IN<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <Dados_IN<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <Dados_IN<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <Dados_IN<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <Dados_IN<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <Dados_IN<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <Dados_IN<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-    Summary:
-	inferred   8 Latch(s).
+WARNING:Xst:737 - Found 8-bit latch for signal <Dados_IN>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 Unit <Periferico_de_Entrada> synthesized.
+
 
 Synthesizing Unit <Periferico_de_Saida>.
     Related source file is "/home/ise/Projects/Projeto_AC/Periferico_de_Saida.vhd".
@@ -336,63 +349,53 @@ Synthesizing Unit <Periferico_de_Saida>.
 	inferred   8 D-type flip-flop(s).
 Unit <Periferico_de_Saida> synthesized.
 
+
 Synthesizing Unit <NOR_Operando>.
     Related source file is "/home/ise/Projects/Projeto_AC/NOR_Operando.vhd".
-    Summary:
-	no macro.
 Unit <NOR_Operando> synthesized.
 
-Synthesizing Unit <Memoria_de_Dados>.
-    Related source file is "/home/ise/Projects/Projeto_AC/Memoria_de_Dados.vhd".
-    Found 256x8-bit single-port RAM <Mram_Mem> for signal <Mem>.
-WARNING:Xst:737 - Found 1-bit latch for signal <Dados_M<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <Dados_M<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <Dados_M<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <Dados_M<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <Dados_M<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <Dados_M<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <Dados_M<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <Dados_M<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-    Summary:
-	inferred   1 RAM(s).
-	inferred   8 Latch(s).
-Unit <Memoria_de_Dados> synthesized.
 
-Synthesizing Unit <Memoria_de_Instrucoes>.
-    Related source file is "/home/ise/Projects/Projeto_AC/Memoria_de_Instrucoes.vhd".
-    Found 32x19-bit Read Only RAM for signal <_n0240>
-    Summary:
-	inferred   1 RAM(s).
-Unit <Memoria_de_Instrucoes> synthesized.
+Synthesizing Unit <Processador>.
+    Related source file is "/home/ise/Projects/Projeto_AC/Processador.vhd".
+Unit <Processador> synthesized.
+
+
+Synthesizing Unit <Placa_Mae>.
+    Related source file is "/home/ise/Projects/Projeto_AC/Placa_Mae.vhd".
+Unit <Placa_Mae> synthesized.
+
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
 
 =========================================================================
 HDL Synthesis Report
 
 Macro Statistics
-# RAMs                                                 : 3
+# RAMs                                                 : 1
  256x8-bit single-port RAM                             : 1
- 32x16-bit single-port Read Only RAM                   : 1
- 32x19-bit single-port Read Only RAM                   : 1
-# Adders/Subtractors                                   : 3
- 8-bit adder                                           : 2
- 8-bit subtractor                                      : 1
+# ROMs                                                 : 2
+ 16x2-bit ROM                                          : 1
+ 27x5-bit ROM                                          : 1
+# Adders/Subtractors                                   : 2
+ 8-bit adder                                           : 1
+ 8-bit addsub                                          : 1
 # Registers                                            : 12
  5-bit register                                        : 1
  8-bit register                                        : 11
-# Latches                                              : 29
- 1-bit latch                                           : 29
-# Comparators                                          : 3
+# Latches                                              : 8
+ 1-bit latch                                           : 5
+ 8-bit latch                                           : 3
+# Comparators                                          : 5
  8-bit comparator equal                                : 1
- 8-bit comparator greater                              : 2
-# Multiplexers                                         : 15
- 1-bit 5-to-1 multiplexer                              : 1
- 1-bit 8-to-1 multiplexer                              : 8
- 8-bit 2-to-1 multiplexer                              : 2
+ 8-bit comparator greatequal                           : 1
+ 8-bit comparator greater                              : 1
+ 8-bit comparator less                                 : 1
+ 8-bit comparator lessequal                            : 1
+# Multiplexers                                         : 6
+ 1-bit 5-to-1 multiplexer                              : 2
  8-bit 4-to-1 multiplexer                              : 1
- 8-bit 8-to-1 multiplexer                              : 2
- 8-bit 9-to-1 multiplexer                              : 1
-# Xors                                                 : 2
- 8-bit xor2                                            : 2
+ 8-bit 8-to-1 multiplexer                              : 3
+# Xors                                                 : 1
+ 8-bit xor2                                            : 1
 
 =========================================================================
 
@@ -424,58 +427,36 @@ INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_Mem> will be implemented on LUTs eit
     -----------------------------------------------------------------------
 Unit <Memoria_de_Dados> synthesized (advanced).
 
-Synthesizing (advanced) Unit <Memoria_de_Instrucoes>.
-INFO:Xst:3231 - The small RAM <Mram__n0240> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
-    -----------------------------------------------------------------------
-    | ram_type           | Distributed                         |          |
-    -----------------------------------------------------------------------
-    | Port A                                                              |
-    |     aspect ratio   | 32-word x 19-bit                    |          |
-    |     weA            | connected to signal <GND>           | high     |
-    |     addrA          | connected to signal <Endereco>      |          |
-    |     diA            | connected to signal <GND>           |          |
-    |     doA            | connected to internal node          |          |
-    -----------------------------------------------------------------------
-Unit <Memoria_de_Instrucoes> synthesized (advanced).
-
-Synthesizing (advanced) Unit <ROM_de_Descodificacao>.
-INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n0045> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
-    -----------------------------------------------------------------------
-    | ram_type           | Distributed                         |          |
-    -----------------------------------------------------------------------
-    | Port A                                                              |
-    |     aspect ratio   | 32-word x 16-bit                    |          |
-    |     weA            | connected to signal <GND>           | high     |
-    |     addrA          | connected to signal <opcode>        |          |
-    |     diA            | connected to signal <GND>           |          |
-    |     doA            | connected to internal node          |          |
-    -----------------------------------------------------------------------
-Unit <ROM_de_Descodificacao> synthesized (advanced).
-
 =========================================================================
 Advanced HDL Synthesis Report
 
 Macro Statistics
-# RAMs                                                 : 3
+# RAMs                                                 : 1
  256x8-bit single-port distributed RAM                 : 1
- 32x16-bit single-port distributed Read Only RAM       : 1
- 32x19-bit single-port distributed Read Only RAM       : 1
-# Adders/Subtractors                                   : 3
- 8-bit adder                                           : 2
- 8-bit subtractor                                      : 1
+# ROMs                                                 : 2
+ 16x2-bit ROM                                          : 1
+ 27x5-bit ROM                                          : 1
+# Adders/Subtractors                                   : 2
+ 8-bit adder                                           : 1
+ 8-bit addsub                                          : 1
 # Registers                                            : 93
  Flip-Flops                                            : 93
-# Comparators                                          : 3
+# Latches                                              : 8
+ 1-bit latch                                           : 5
+ 8-bit latch                                           : 3
+# Comparators                                          : 5
  8-bit comparator equal                                : 1
- 8-bit comparator greater                              : 2
-# Multiplexers                                         : 29
- 1-bit 5-to-1 multiplexer                              : 1
- 1-bit 8-to-1 multiplexer                              : 24
- 8-bit 2-to-1 multiplexer                              : 2
+ 8-bit comparator greatequal                           : 1
+ 8-bit comparator greater                              : 1
+ 8-bit comparator less                                 : 1
+ 8-bit comparator lessequal                            : 1
+# Multiplexers                                         : 20
+ 1-bit 5-to-1 multiplexer                              : 2
+ 1-bit 8-to-1 multiplexer                              : 16
  8-bit 4-to-1 multiplexer                              : 1
- 8-bit 9-to-1 multiplexer                              : 1
-# Xors                                                 : 2
- 8-bit xor2                                            : 2
+ 8-bit 8-to-1 multiplexer                              : 1
+# Xors                                                 : 1
+ 8-bit xor2                                            : 1
 
 =========================================================================
 
@@ -491,43 +472,67 @@ INFO:Xst:2261 - The FF/Latch <contagem_5> in Unit <PC> is equivalent to the foll
 INFO:Xst:2261 - The FF/Latch <contagem_6> in Unit <PC> is equivalent to the following FF/Latch, which will be removed : <Endereco_6> 
 INFO:Xst:2261 - The FF/Latch <contagem_7> in Unit <PC> is equivalent to the following FF/Latch, which will be removed : <Endereco_7> 
 
-Optimizing unit <Periferico_de_Entrada> ...
-
-Optimizing unit <Periferico_de_Saida> ...
-
-Optimizing unit <Memoria_de_Dados> ...
-
 Optimizing unit <Placa_Mae> ...
-
-Optimizing unit <Processador> ...
-
-Optimizing unit <Banco_de_Registos> ...
 
 Optimizing unit <PC> ...
 
+Optimizing unit <Banco_de_Registos> ...
+
+Optimizing unit <Periferico_de_Saida> ...
+
 Optimizing unit <ALU> ...
-WARNING:Xst:2677 - Node <Processador_PM/PC_P/contagem_7> of sequential type is unconnected in block <Placa_Mae>.
-WARNING:Xst:2677 - Node <Processador_PM/PC_P/contagem_6> of sequential type is unconnected in block <Placa_Mae>.
+
+Optimizing unit <Processador> ...
 WARNING:Xst:2677 - Node <Processador_PM/PC_P/contagem_5> of sequential type is unconnected in block <Placa_Mae>.
-WARNING:Xst:1710 - FF/Latch <Processador_PM/Banco_de_Registos_P/R5_7> (without init value) has a constant value of 0 in block <Placa_Mae>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Processador_PM/Banco_de_Registos_P/R5_6> (without init value) has a constant value of 0 in block <Placa_Mae>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Processador_PM/Banco_de_Registos_P/R5_5> (without init value) has a constant value of 0 in block <Placa_Mae>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Processador_PM/Banco_de_Registos_P/R5_4> (without init value) has a constant value of 0 in block <Placa_Mae>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Processador_PM/Banco_de_Registos_P/R5_3> (without init value) has a constant value of 0 in block <Placa_Mae>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Processador_PM/Banco_de_Registos_P/R5_2> (without init value) has a constant value of 0 in block <Placa_Mae>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Processador_PM/Banco_de_Registos_P/R5_1> (without init value) has a constant value of 0 in block <Placa_Mae>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Processador_PM/Banco_de_Registos_P/R5_0> (without init value) has a constant value of 0 in block <Placa_Mae>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Processador_PM/Banco_de_Registos_P/R4_3> (without init value) has a constant value of 0 in block <Placa_Mae>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Processador_PM/Banco_de_Registos_P/R4_2> (without init value) has a constant value of 0 in block <Placa_Mae>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Processador_PM/Banco_de_Registos_P/R4_1> (without init value) has a constant value of 0 in block <Placa_Mae>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Processador_PM/Banco_de_Registos_P/R4_0> (without init value) has a constant value of 0 in block <Placa_Mae>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Processador_PM/Banco_de_Registos_P/R1_0> (without init value) has a constant value of 0 in block <Placa_Mae>. This FF/Latch will be trimmed during the optimization process.
-INFO:Xst:2261 - The FF/Latch <Processador_PM/Banco_de_Registos_P/R1_7> in Unit <Placa_Mae> is equivalent to the following 6 FFs/Latches, which will be removed : <Processador_PM/Banco_de_Registos_P/R1_6> <Processador_PM/Banco_de_Registos_P/R1_5> <Processador_PM/Banco_de_Registos_P/R1_4> <Processador_PM/Banco_de_Registos_P/R1_3> <Processador_PM/Banco_de_Registos_P/R1_2> <Processador_PM/Banco_de_Registos_P/R1_1> 
-INFO:Xst:2261 - The FF/Latch <Processador_PM/Banco_de_Registos_P/R4_7> in Unit <Placa_Mae> is equivalent to the following 3 FFs/Latches, which will be removed : <Processador_PM/Banco_de_Registos_P/R4_6> <Processador_PM/Banco_de_Registos_P/R4_5> <Processador_PM/Banco_de_Registos_P/R4_4> 
+WARNING:Xst:2677 - Node <Processador_PM/PC_P/contagem_6> of sequential type is unconnected in block <Placa_Mae>.
+WARNING:Xst:2677 - Node <Processador_PM/PC_P/contagem_7> of sequential type is unconnected in block <Placa_Mae>.
+INFO:Xst:2399 - RAMs <Memoria_de_Dados_PM/Mram_Mem4>, <Memoria_de_Dados_PM/Mram_Mem2> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <Memoria_de_Dados_PM/Mram_Mem4>, <Memoria_de_Dados_PM/Mram_Mem3> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <Memoria_de_Dados_PM/Mram_Mem4>, <Memoria_de_Dados_PM/Mram_Mem5> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <Memoria_de_Dados_PM/Mram_Mem4>, <Memoria_de_Dados_PM/Mram_Mem6> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <Memoria_de_Dados_PM/Mram_Mem4>, <Memoria_de_Dados_PM/Mram_Mem7> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <Memoria_de_Dados_PM/Mram_Mem10>, <Memoria_de_Dados_PM/Mram_Mem11> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <Memoria_de_Dados_PM/Mram_Mem10>, <Memoria_de_Dados_PM/Mram_Mem12> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <Memoria_de_Dados_PM/Mram_Mem10>, <Memoria_de_Dados_PM/Mram_Mem13> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <Memoria_de_Dados_PM/Mram_Mem10>, <Memoria_de_Dados_PM/Mram_Mem14> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <Memoria_de_Dados_PM/Mram_Mem10>, <Memoria_de_Dados_PM/Mram_Mem15> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <Memoria_de_Dados_PM/Mram_Mem18>, <Memoria_de_Dados_PM/Mram_Mem19> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <Memoria_de_Dados_PM/Mram_Mem18>, <Memoria_de_Dados_PM/Mram_Mem20> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <Memoria_de_Dados_PM/Mram_Mem18>, <Memoria_de_Dados_PM/Mram_Mem23> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <Memoria_de_Dados_PM/Mram_Mem18>, <Memoria_de_Dados_PM/Mram_Mem21> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <Memoria_de_Dados_PM/Mram_Mem18>, <Memoria_de_Dados_PM/Mram_Mem22> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <Memoria_de_Dados_PM/Mram_Mem28>, <Memoria_de_Dados_PM/Mram_Mem26> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <Memoria_de_Dados_PM/Mram_Mem28>, <Memoria_de_Dados_PM/Mram_Mem27> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <Memoria_de_Dados_PM/Mram_Mem28>, <Memoria_de_Dados_PM/Mram_Mem29> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <Memoria_de_Dados_PM/Mram_Mem28>, <Memoria_de_Dados_PM/Mram_Mem30> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <Memoria_de_Dados_PM/Mram_Mem28>, <Memoria_de_Dados_PM/Mram_Mem31> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <Memoria_de_Dados_PM/Mram_Mem34>, <Memoria_de_Dados_PM/Mram_Mem37> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <Memoria_de_Dados_PM/Mram_Mem34>, <Memoria_de_Dados_PM/Mram_Mem35> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <Memoria_de_Dados_PM/Mram_Mem34>, <Memoria_de_Dados_PM/Mram_Mem36> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <Memoria_de_Dados_PM/Mram_Mem34>, <Memoria_de_Dados_PM/Mram_Mem38> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <Memoria_de_Dados_PM/Mram_Mem34>, <Memoria_de_Dados_PM/Mram_Mem39> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <Memoria_de_Dados_PM/Mram_Mem42>, <Memoria_de_Dados_PM/Mram_Mem43> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <Memoria_de_Dados_PM/Mram_Mem42>, <Memoria_de_Dados_PM/Mram_Mem44> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <Memoria_de_Dados_PM/Mram_Mem42>, <Memoria_de_Dados_PM/Mram_Mem47> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <Memoria_de_Dados_PM/Mram_Mem42>, <Memoria_de_Dados_PM/Mram_Mem45> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <Memoria_de_Dados_PM/Mram_Mem42>, <Memoria_de_Dados_PM/Mram_Mem46> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <Memoria_de_Dados_PM/Mram_Mem50>, <Memoria_de_Dados_PM/Mram_Mem51> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <Memoria_de_Dados_PM/Mram_Mem50>, <Memoria_de_Dados_PM/Mram_Mem52> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <Memoria_de_Dados_PM/Mram_Mem50>, <Memoria_de_Dados_PM/Mram_Mem53> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <Memoria_de_Dados_PM/Mram_Mem50>, <Memoria_de_Dados_PM/Mram_Mem54> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <Memoria_de_Dados_PM/Mram_Mem50>, <Memoria_de_Dados_PM/Mram_Mem55> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <Memoria_de_Dados_PM/Mram_Mem58>, <Memoria_de_Dados_PM/Mram_Mem61> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <Memoria_de_Dados_PM/Mram_Mem58>, <Memoria_de_Dados_PM/Mram_Mem59> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <Memoria_de_Dados_PM/Mram_Mem58>, <Memoria_de_Dados_PM/Mram_Mem60> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <Memoria_de_Dados_PM/Mram_Mem58>, <Memoria_de_Dados_PM/Mram_Mem62> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <Memoria_de_Dados_PM/Mram_Mem58>, <Memoria_de_Dados_PM/Mram_Mem63> are equivalent, second RAM is removed
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block Placa_Mae, actual ratio is 0.
+Found area constraint ratio of 100 (+ 5) on block Placa_Mae, actual ratio is 4.
+FlipFlop Processador_PM/PC_P/contagem_0 has been replicated 1 time(s)
+FlipFlop Processador_PM/PC_P/contagem_2 has been replicated 1 time(s)
+FlipFlop Processador_PM/PC_P/contagem_4 has been replicated 1 time(s)
 
 Final Macro Processing ...
 
@@ -535,8 +540,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 60
- Flip-Flops                                            : 60
+# Registers                                            : 85
+ Flip-Flops                                            : 85
 
 =========================================================================
 
@@ -552,64 +557,64 @@ Partition Implementation Status
 -------------------------------
 
 =========================================================================
-*                            Design Summary                             *
+*                            Final Report                               *
 =========================================================================
+Final Results
+RTL Top Level Output File Name     : Placa_Mae.ngr
+Top Level Output File Name         : Placa_Mae
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
 
-Top Level Output File Name         : Placa_Mae.ngc
+Design Statistics
+# IOs                              : 18
 
-Primitive and Black Box Usage:
-------------------------------
-# BELS                             : 228
+Cell Usage :
+# BELS                             : 428
 #      GND                         : 1
-#      LUT2                        : 25
-#      LUT3                        : 15
-#      LUT4                        : 24
-#      LUT5                        : 40
-#      LUT6                        : 68
-#      MUXCY                       : 14
-#      MUXF7                       : 24
+#      INV                         : 2
+#      LUT1                        : 24
+#      LUT2                        : 28
+#      LUT2_D                      : 1
+#      LUT3                        : 144
+#      LUT3_D                      : 1
+#      LUT3_L                      : 1
+#      LUT4                        : 59
+#      LUT4_D                      : 5
+#      LUT4_L                      : 10
+#      MUXCY                       : 23
+#      MUXF5                       : 88
+#      MUXF6                       : 32
 #      VCC                         : 1
-#      XORCY                       : 16
-# FlipFlops/Latches                : 89
-#      FD                          : 5
-#      FDE                         : 55
+#      XORCY                       : 8
+# FlipFlops/Latches                : 114
+#      FDE                         : 77
+#      FDR                         : 8
 #      LD                          : 13
 #      LD_1                        : 16
-# RAMS                             : 8
-#      RAM256X1S                   : 8
+# RAMS                             : 24
+#      RAM32X1S                    : 24
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
 # IO Buffers                       : 17
 #      IBUF                        : 9
 #      OBUF                        : 8
+=========================================================================
 
 Device utilization summary:
 ---------------------------
 
-Selected Device : 7a100tcsg324-3 
+Selected Device : 3s500efg320-4 
 
-
-Slice Logic Utilization: 
- Number of Slice Registers:              81  out of  126800     0%  
- Number of Slice LUTs:                  204  out of  63400     0%  
-    Number used as Logic:               172  out of  63400     0%  
-    Number used as Memory:               32  out of  19000     0%  
-       Number used as RAM:               32
-
-Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    238
-   Number with an unused Flip Flop:     157  out of    238    65%  
-   Number with an unused LUT:            34  out of    238    14%  
-   Number of fully used LUT-FF pairs:    47  out of    238    19%  
-   Number of unique control sets:        14
-
-IO Utilization: 
+ Number of Slices:                      168  out of   4656     3%  
+ Number of Slice Flip Flops:            106  out of   9312     1%  
+ Number of 4 input LUTs:                323  out of   9312     3%  
+    Number used as logic:               275
+    Number used as RAMs:                 48
  Number of IOs:                          18
- Number of bonded IOBs:                  18  out of    210     8%  
-    IOB Flip Flops/Latches:               8
-
-Specific Feature Utilization:
- Number of BUFG/BUFGCTRLs:                1  out of     32     3%  
+ Number of bonded IOBs:                  18  out of    232     7%  
+    IOB Flip Flops:                       8
+ Number of GCLKs:                         1  out of     24     4%  
 
 ---------------------------
 Partition Resource Summary:
@@ -621,7 +626,7 @@ Partition Resource Summary:
 
 
 =========================================================================
-Timing Report
+TIMING REPORT
 
 NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
       FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
@@ -629,15 +634,15 @@ NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
 
 Clock Information:
 ------------------
------------------------------------------------------------------------------+-----------------------------------------------------------+-------+
-Clock Signal                                                                 | Clock buffer(FF name)                                     | Load  |
------------------------------------------------------------------------------+-----------------------------------------------------------+-------+
-clk                                                                          | BUFGP                                                     | 68    |
-Processador_PM/ESCR_P(Processador_PM/ROM_de_Descodificacao_P/Mram__n004541:O)| NONE(*)(Processador_PM/Periferico_de_Entrada_P/Dados_IN_7)| 8     |
-Processador_PM/ALU_P/_n0126<0>(Processador_PM/ALU_P/_n0126<0>1:O)            | NONE(*)(Processador_PM/ALU_P/operacao_0)                  | 8     |
-Processador_PM/ESCR_R<1>(Processador_PM/ESCR_R<1>1:O)                        | NONE(*)(Processador_PM/ALU_P/E_FLAG_2)                    | 5     |
-WR(Processador_PM/ROM_de_Descodificacao_P/Mram__n004591:O)                   | NONE(*)(Memoria_de_Dados_PM/Dados_M_7)                    | 8     |
------------------------------------------------------------------------------+-----------------------------------------------------------+-------+
+----------------------------------------------------------------------------------------------+-----------------------------------------------------------+-------+
+Clock Signal                                                                                  | Clock buffer(FF name)                                     | Load  |
+----------------------------------------------------------------------------------------------+-----------------------------------------------------------+-------+
+clk                                                                                           | BUFGP                                                     | 109   |
+WR(Processador_PM/WR:O)                                                                       | NONE(*)(Memoria_de_Dados_PM/Dados_M_0)                    | 8     |
+Processador_PM/ALU_P/E_FLAG_0_cmp_eq0000(Processador_PM/ROM_de_Descodificacao_P/ESCR_R<1>11:O)| NONE(*)(Processador_PM/ALU_P/E_FLAG_4)                    | 5     |
+Processador_PM/ALU_P/Resultado_not0004(Processador_PM/ALU_P/Resultado_not00041:O)             | NONE(*)(Processador_PM/ALU_P/Resultado_0)                 | 8     |
+Processador_PM/ESCR_P(Processador_PM/ROM_de_Descodificacao_P/ESCR_P_cmp_eq0000:O)             | NONE(*)(Processador_PM/Periferico_de_Entrada_P/Dados_IN_7)| 8     |
+----------------------------------------------------------------------------------------------+-----------------------------------------------------------+-------+
 (*) These 4 clock signal(s) are generated by combinatorial logic,
 and XST is not able to identify which are the primary clock signals.
 Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
@@ -649,77 +654,51 @@ No asynchronous control signals found in this design
 
 Timing Summary:
 ---------------
-Speed Grade: -3
+Speed Grade: -4
 
-   Minimum period: 4.304ns (Maximum Frequency: 232.358MHz)
-   Minimum input arrival time before clock: 0.818ns
-   Maximum output required time after clock: 0.640ns
+   Minimum period: 10.440ns (Maximum Frequency: 95.785MHz)
+   Minimum input arrival time before clock: 2.886ns
+   Maximum output required time after clock: 4.283ns
    Maximum combinational path delay: No path found
 
-Timing Details:
----------------
+Timing Detail:
+--------------
 All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
-  Clock period: 4.304ns (frequency: 232.358MHz)
-  Total number of paths / destination ports: 53647 / 190
+  Clock period: 10.440ns (frequency: 95.785MHz)
+  Total number of paths / destination ports: 21216 / 317
 -------------------------------------------------------------------------
-Delay:               4.304ns (Levels of Logic = 14)
+Delay:               10.440ns (Levels of Logic = 8)
   Source:            Processador_PM/PC_P/contagem_3 (FF)
-  Destination:       Processador_PM/Banco_de_Registos_P/R7_7 (FF)
+  Destination:       Processador_PM/PC_P/contagem_0 (FF)
   Source Clock:      clk rising
   Destination Clock: clk rising
 
-  Data Path: Processador_PM/PC_P/contagem_3 to Processador_PM/Banco_de_Registos_P/R7_7
+  Data Path: Processador_PM/PC_P/contagem_3 to Processador_PM/PC_P/contagem_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FD:C->Q              19   0.361   0.767  Processador_PM/PC_P/contagem_3 (Processador_PM/PC_P/contagem_3)
-     LUT5:I0->O           16   0.097   0.448  Memoria_de_Instrucoes_PM/Mram__n024091 (Memoria_de_Instrucoes_PM/Mram__n02409)
-     LUT4:I2->O            1   0.097   0.000  Processador_PM/Banco_de_Registos_P/mux8_31 (Processador_PM/Banco_de_Registos_P/mux8_3)
-     MUXF7:I1->O           9   0.279   0.416  Processador_PM/Banco_de_Registos_P/mux8_2_f7 (Processador_PM/Operando2<0>)
-     LUT2:I0->O            1   0.097   0.000  Processador_PM/ALU_P/Msub_GND_15_o_GND_15_o_sub_2_OUT<7:0>_lut<0>1 (Processador_PM/ALU_P/Msub_GND_15_o_GND_15_o_sub_2_OUT<7:0>_lut<0>)
-     MUXCY:S->O            1   0.353   0.000  Processador_PM/ALU_P/Msub_GND_15_o_GND_15_o_sub_2_OUT<7:0>_cy<0> (Processador_PM/ALU_P/Msub_GND_15_o_GND_15_o_sub_2_OUT<7:0>_cy<0>)
-     MUXCY:CI->O           1   0.023   0.000  Processador_PM/ALU_P/Msub_GND_15_o_GND_15_o_sub_2_OUT<7:0>_cy<1> (Processador_PM/ALU_P/Msub_GND_15_o_GND_15_o_sub_2_OUT<7:0>_cy<1>)
-     MUXCY:CI->O           1   0.023   0.000  Processador_PM/ALU_P/Msub_GND_15_o_GND_15_o_sub_2_OUT<7:0>_cy<2> (Processador_PM/ALU_P/Msub_GND_15_o_GND_15_o_sub_2_OUT<7:0>_cy<2>)
-     MUXCY:CI->O           1   0.023   0.000  Processador_PM/ALU_P/Msub_GND_15_o_GND_15_o_sub_2_OUT<7:0>_cy<3> (Processador_PM/ALU_P/Msub_GND_15_o_GND_15_o_sub_2_OUT<7:0>_cy<3>)
-     MUXCY:CI->O           1   0.023   0.000  Processador_PM/ALU_P/Msub_GND_15_o_GND_15_o_sub_2_OUT<7:0>_cy<4> (Processador_PM/ALU_P/Msub_GND_15_o_GND_15_o_sub_2_OUT<7:0>_cy<4>)
-     MUXCY:CI->O           1   0.023   0.000  Processador_PM/ALU_P/Msub_GND_15_o_GND_15_o_sub_2_OUT<7:0>_cy<5> (Processador_PM/ALU_P/Msub_GND_15_o_GND_15_o_sub_2_OUT<7:0>_cy<5>)
-     MUXCY:CI->O           0   0.023   0.000  Processador_PM/ALU_P/Msub_GND_15_o_GND_15_o_sub_2_OUT<7:0>_cy<6> (Processador_PM/ALU_P/Msub_GND_15_o_GND_15_o_sub_2_OUT<7:0>_cy<6>)
-     XORCY:CI->O           2   0.370   0.383  Processador_PM/ALU_P/Msub_GND_15_o_GND_15_o_sub_2_OUT<7:0>_xor<7> (Processador_PM/ALU_P/GND_15_o_GND_15_o_sub_2_OUT<7>)
-     LUT6:I4->O            1   0.097   0.295  Processador_PM/MUX_R_P/Mmux_Dados_R85 (Processador_PM/MUX_R_P/Mmux_Dados_R84)
-     LUT6:I5->O            7   0.097   0.000  Processador_PM/MUX_R_P/Mmux_Dados_R86 (Processador_PM/Dados_R<7>)
-     FDE:D                     0.008          Processador_PM/Banco_de_Registos_P/R3_7
+     FDR:C->Q             34   0.591   1.342  Processador_PM/PC_P/contagem_3 (Processador_PM/PC_P/contagem_3)
+     LUT4:I1->O            1   0.704   0.000  Memoria_de_Instrucoes_PM/SEL_R_0_mux0000_1_F (N174)
+     MUXF5:I0->O          32   0.321   1.297  Memoria_de_Instrucoes_PM/SEL_R_0_mux0000_1 (Memoria_de_Instrucoes_PM/SEL_R_0_mux0000)
+     LUT3:I2->O            1   0.704   0.000  Processador_PM/Banco_de_Registos_P/mux7_6 (Processador_PM/Banco_de_Registos_P/mux7_6)
+     MUXF5:I0->O           1   0.321   0.000  Processador_PM/Banco_de_Registos_P/mux7_4_f5 (Processador_PM/Banco_de_Registos_P/mux7_4_f5)
+     MUXF6:I0->O          13   0.521   0.987  Processador_PM/Banco_de_Registos_P/mux7_2_f6 (Operando1<7>)
+     LUT4:I3->O            1   0.704   0.595  Processador_PM/SEL_PC<2>76_SW0 (N87)
+     LUT4:I0->O            5   0.704   0.637  Processador_PM/SEL_PC<2>76 (Processador_PM/SEL_PC<2>76)
+     LUT4:I3->O            2   0.704   0.000  Processador_PM/PC_P/contagem_mux0001<0>11 (Processador_PM/PC_P/contagem_mux0001<0>1)
+     FDR:D                     0.308          Processador_PM/PC_P/contagem_0
     ----------------------------------------
-    Total                      4.304ns (1.994ns logic, 2.310ns route)
-                                       (46.3% logic, 53.7% route)
-
-=========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
-  Total number of paths / destination ports: 5 / 5
--------------------------------------------------------------------------
-Offset:              0.818ns (Levels of Logic = 2)
-  Source:            reset (PAD)
-  Destination:       Processador_PM/PC_P/contagem_4 (FF)
-  Destination Clock: clk rising
-
-  Data Path: reset to Processador_PM/PC_P/contagem_4
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     IBUF:I->O             5   0.001   0.712  reset_IBUF (reset_IBUF)
-     LUT6:I0->O            1   0.097   0.000  Processador_PM/PC_P/GND_7_o_Constante[7]_mux_2_OUT<4>1 (Processador_PM/PC_P/GND_7_o_Constante[7]_mux_2_OUT<4>)
-     FD:D                      0.008          Processador_PM/PC_P/contagem_4
-    ----------------------------------------
-    Total                      0.818ns (0.106ns logic, 0.712ns route)
-                                       (13.0% logic, 87.0% route)
+    Total                     10.440ns (5.582ns logic, 4.858ns route)
+                                       (53.5% logic, 46.5% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'Processador_PM/ESCR_P'
   Total number of paths / destination ports: 8 / 8
 -------------------------------------------------------------------------
-Offset:              0.280ns (Levels of Logic = 1)
+Offset:              1.946ns (Levels of Logic = 1)
   Source:            PIN<7> (PAD)
   Destination:       Processador_PM/Periferico_de_Entrada_P/Dados_IN_7 (LATCH)
   Destination Clock: Processador_PM/ESCR_P rising
@@ -728,17 +707,36 @@ Offset:              0.280ns (Levels of Logic = 1)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             1   0.001   0.279  PIN_7_IBUF (PIN_7_IBUF)
-     LD_1:D                   -0.028          Processador_PM/Periferico_de_Entrada_P/Dados_IN_7
+     IBUF:I->O             1   1.218   0.420  PIN_7_IBUF (PIN_7_IBUF)
+     LD_1:D                    0.308          Processador_PM/Periferico_de_Entrada_P/Dados_IN_7
     ----------------------------------------
-    Total                      0.280ns (0.001ns logic, 0.279ns route)
-                                       (0.4% logic, 99.6% route)
+    Total                      1.946ns (1.526ns logic, 0.420ns route)
+                                       (78.4% logic, 21.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 8 / 8
+-------------------------------------------------------------------------
+Offset:              2.886ns (Levels of Logic = 1)
+  Source:            reset (PAD)
+  Destination:       Processador_PM/PC_P/contagem_0 (FF)
+  Destination Clock: clk rising
+
+  Data Path: reset to Processador_PM/PC_P/contagem_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             8   1.218   0.757  reset_IBUF (reset_IBUF)
+     FDR:R                     0.911          Processador_PM/PC_P/contagem_0
+    ----------------------------------------
+    Total                      2.886ns (2.129ns logic, 0.757ns route)
+                                       (73.8% logic, 26.2% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
   Total number of paths / destination ports: 8 / 8
 -------------------------------------------------------------------------
-Offset:              0.640ns (Levels of Logic = 1)
+Offset:              4.283ns (Levels of Logic = 1)
   Source:            Processador_PM/Periferico_de_Saida_P/POUT_7 (FF)
   Destination:       POUT<7> (PAD)
   Source Clock:      clk rising
@@ -747,65 +745,24 @@ Offset:              0.640ns (Levels of Logic = 1)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDE:C->Q              1   0.361   0.279  Processador_PM/Periferico_de_Saida_P/POUT_7 (Processador_PM/Periferico_de_Saida_P/POUT_7)
-     OBUF:I->O                 0.000          POUT_7_OBUF (POUT<7>)
+     FDE:C->Q              1   0.591   0.420  Processador_PM/Periferico_de_Saida_P/POUT_7 (Processador_PM/Periferico_de_Saida_P/POUT_7)
+     OBUF:I->O                 3.272          POUT_7_OBUF (POUT<7>)
     ----------------------------------------
-    Total                      0.640ns (0.361ns logic, 0.279ns route)
-                                       (56.4% logic, 43.6% route)
-
-=========================================================================
-
-Cross Clock Domains Report:
---------------------------
-
-Clock to Setup on destination clock Processador_PM/ALU_P/_n0126<0>
----------------+---------+---------+---------+---------+
-               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
----------------+---------+---------+---------+---------+
-clk            |         |         |    4.180|         |
----------------+---------+---------+---------+---------+
-
-Clock to Setup on destination clock Processador_PM/ESCR_R<1>
----------------+---------+---------+---------+---------+
-               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
----------------+---------+---------+---------+---------+
-clk            |         |         |    4.404|         |
----------------+---------+---------+---------+---------+
-
-Clock to Setup on destination clock WR
----------------+---------+---------+---------+---------+
-               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
----------------+---------+---------+---------+---------+
-clk            |    1.844|         |         |         |
----------------+---------+---------+---------+---------+
-
-Clock to Setup on destination clock clk
-------------------------------+---------+---------+---------+---------+
-                              | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock                  |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
-------------------------------+---------+---------+---------+---------+
-Processador_PM/ALU_P/_n0126<0>|         |    1.270|         |         |
-Processador_PM/ESCR_P         |    2.176|         |         |         |
-Processador_PM/ESCR_R<1>      |         |    0.759|         |         |
-WR                            |    2.092|         |         |         |
-clk                           |    4.304|         |         |         |
-------------------------------+---------+---------+---------+---------+
+    Total                      4.283ns (3.863ns logic, 0.420ns route)
+                                       (90.2% logic, 9.8% route)
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 32.00 secs
-Total CPU time to Xst completion: 31.68 secs
+Total REAL time to Xst completion: 27.00 secs
+Total CPU time to Xst completion: 26.39 secs
  
 --> 
 
 
-Total memory usage is 606036 kilobytes
+Total memory usage is 624728 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   64 (   0 filtered)
-Number of infos    :   22 (   0 filtered)
+Number of warnings :   14 (   0 filtered)
+Number of infos    :   61 (   0 filtered)
 

@@ -16,8 +16,11 @@ architecture Behavioral of Banco_de_Registos is
 begin
 
 	process(ESCR_R, clk, SEL_R, Dados_R)
+	
+	-- Array que contem o 8 registos de 8 bits
 	type array_r is array (0 to 7) of STD_LOGIC_VECTOR (7 downto 0); -- Guardar os dados
 	variable registos : array_r;
+	
 	begin
 	
 		-- Se o sinal do bit menos significativo de ESCR_P está a 1
@@ -26,12 +29,14 @@ begin
 			-- Se está na transição ascendente do relógio
 			if rising_edge(clk) then
 				
+				-- Atribui os valores aos registos dependendo dos três bits menos significativos de SEL_R
 				registos(to_integer(unsigned(SEL_R (2 downto 0)))) := Dados_R;
 				
 			end if;
 			
 		end if;
 		
+		-- Atribui o valor do registo correspondente a cada operando
 		Operando1 <= registos(to_integer(unsigned(SEL_R (2 downto 0))));
 		Operando2 <= registos(to_integer(unsigned(SEL_R (5 downto 3))));
 	

@@ -43,6 +43,7 @@ BEGIN
    -- Stimulus process
    stim_proc: process
    begin
+	
 		-- Configurações iniciais para os sinais de controle SEL_ALU, Operando1 e Operando2
 		SEL_ALU <= "0000"; Operando1 <= "00000111"; Operando2 <= "00000111"; wait for 10 ns;
 		SEL_ALU <= "0001"; Operando1 <= "00000111"; Operando2 <= "00000111"; wait for 10 ns;

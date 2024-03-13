@@ -47,6 +47,6 @@ Time Resolution for simulation is 1ps.
 Waiting for 1 sub-compilation(s) to finish...
 Compiled 35 VHDL Units
 Built simulation executable /home/ise/Projects/Projeto_AC/Test_Placa_Mae_isim_beh.exe
-Fuse Memory Usage: 1461540 KB
-Fuse CPU Usage: 4740 ms
-GCC CPU Usage: 3910 ms
+Fuse Memory Usage: 1461516 KB
+Fuse CPU Usage: 4710 ms
+GCC CPU Usage: 3870 ms

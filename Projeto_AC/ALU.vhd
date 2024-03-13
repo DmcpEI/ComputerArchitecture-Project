@@ -30,8 +30,9 @@ begin
 			when "0101" => Resultado <= not(Operando1 or Operando2);
 			when "0110" => Resultado <= Operando1 xor Operando2;
 			when "0111" => Resultado <= not(Operando1 xor Operando2);
-			-- Atribui o valor da 1 ao bit de E_FLAG dependendo da comparação
+			-- Atribui o valor 1 ao bit de E_FLAG dependendo da comparação
 			when "1000" =>
+				-- Todos os bits de E_FLAG ficam a 0 no início
 				E_FLAG <= (others => '0');
             
             if (Operando1 < Operando2) then
@@ -49,7 +50,7 @@ begin
             if (Operando1 > Operando2) then
                 E_FLAG(4) <= '1';
             end if;
-			-- Para qualquer outro valor de SEL_ALU, atribui 'X' a E_FLAG
+			-- Para qualquer outro valor de SEL_ALU, atribui 'X' a E_FLAG e a Resultado
 			when others => E_FLAG <= (others => 'X'); Resultado <= (others => 'X');
 			
 		end case;

@@ -15,7 +15,7 @@ architecture Behavioral of PC is
 begin
 
 	process(clk, reset, ESCR_PC, Constante)
-	-- Declaração da variavel contagem
+	-- Declaração da variavel contagem responsável por guardar o valor da posição atual do programa
 	variable contagem : STD_LOGIC_VECTOR (7 downto 0) := "00000000";
    begin
 

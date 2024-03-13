@@ -14,7 +14,8 @@ begin
 
 	process(Endereco)
 	begin
-	
+		
+		-- Início da estrutura de seleção de casos dependendo do valor de Endereco
 		case Endereco is
 		
 			-- LDP R0

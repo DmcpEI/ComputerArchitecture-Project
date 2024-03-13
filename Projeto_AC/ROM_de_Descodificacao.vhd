@@ -18,6 +18,8 @@ begin
 
 	process(opcode)
 	begin
+	
+		-- Início da estrutura de seleção de casos dependendo do valor de opcode
 		case opcode is
 		
 		--Periféricos 
