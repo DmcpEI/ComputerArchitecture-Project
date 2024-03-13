@@ -2,12 +2,12 @@ Command line:
    Test_ALU_isim_beh.exe
      -simmode  gui
      -simrunnum  0
-     -socket  33779
+     -socket  59794
 
-Mon Mar 11 11:55:16 2024
+Tue Mar 12 11:05:55 2024
 
 
- Elaboration Time: 0.35 sec
+ Elaboration Time: 0.46 sec
 
  Current Memory Usage: 215.63 Meg
 
@@ -27,9 +27,9 @@ In process Test_ALU.vhd:stim_proc
  
 
 
- Total Simulation Time: 0.4 sec
+ Total Simulation Time: 0.53 sec
 
  Current Memory Usage: 293.229 Meg
 
-Mon Mar 11 11:55:33 2024
+Tue Mar 12 11:06:15 2024
 

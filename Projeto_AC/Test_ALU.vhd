@@ -42,20 +42,20 @@ BEGIN
 
    -- Stimulus process
    stim_proc: process
-   begin		
-      
-		SEL_ALU <= "0000"; Operando1 <= "00000001"; Operando2 <= "00000010"; wait for 10 ns;
-		SEL_ALU <= "0001"; Operando1 <= "00000001"; Operando2 <= "00000010"; wait for 10 ns;
-		SEL_ALU <= "0010"; Operando1 <= "00000001"; Operando2 <= "00000010"; wait for 10 ns;
-		SEL_ALU <= "0011"; Operando1 <= "00000001"; Operando2 <= "00000010"; wait for 10 ns;
-		SEL_ALU <= "0100"; Operando1 <= "00000001"; Operando2 <= "00000010"; wait for 10 ns;
-		SEL_ALU <= "0101"; Operando1 <= "00000001"; Operando2 <= "00000010"; wait for 10 ns;
-		SEL_ALU <= "0110"; Operando1 <= "00000001"; Operando2 <= "00000010"; wait for 10 ns;
-		SEL_ALU <= "0111"; Operando1 <= "00000001"; Operando2 <= "00000010"; wait for 10 ns;
-		SEL_ALU <= "1000"; Operando1 <= "00000001"; Operando2 <= "00000010"; wait for 10 ns;
-		
+   begin
+		-- Configurações iniciais para os sinais de controle SEL_ALU, Operando1 e Operando2
+		SEL_ALU <= "0000"; Operando1 <= "00000111"; Operando2 <= "00000111"; wait for 10 ns;
+		SEL_ALU <= "0001"; Operando1 <= "00000111"; Operando2 <= "00000111"; wait for 10 ns;
+		SEL_ALU <= "0010"; Operando1 <= "00000111"; Operando2 <= "00000111"; wait for 10 ns;
+		SEL_ALU <= "0011"; Operando1 <= "00000111"; Operando2 <= "00000111"; wait for 10 ns;
+		SEL_ALU <= "0100"; Operando1 <= "00000111"; Operando2 <= "00000111"; wait for 10 ns;
+		SEL_ALU <= "0101"; Operando1 <= "00000111"; Operando2 <= "00000111"; wait for 10 ns;
+		SEL_ALU <= "0110"; Operando1 <= "00000111"; Operando2 <= "00000111"; wait for 10 ns;
+		SEL_ALU <= "0111"; Operando1 <= "00000111"; Operando2 <= "00000111"; wait for 10 ns;
+		SEL_ALU <= "1000"; Operando1 <= "00000111"; Operando2 <= "00000111"; wait for 10 ns;
+
+		-- Este assert é usado para garantir que a simulação não chegue ao fim, indicando que ela foi concluída
 		assert FALSE Report "Simulation Finished" severity FAILURE;
-		
-   end process;
+	end process;
 
 END;

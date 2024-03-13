@@ -2,10 +2,6 @@
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
  
--- Uncomment the following library declaration if using
--- arithmetic functions with Signed or Unsigned values
---USE ieee.numeric_std.ALL;
- 
 ENTITY Test_Periferico_de_Saida IS
 END Test_Periferico_de_Saida;
  
@@ -56,15 +52,31 @@ BEGIN
 
    -- Stimulus process
    stim_proc: process
-   begin		
-      -- hold reset state for 100 ns.
-      wait for 100 ns;	
+   begin
+		 -- Configuração inicial: desativa a escrita e define o valor do operando de saída (Operando1).
+		 ESCR_P <= '0'; -- Desativa a escrita.
+		 Operando1 <= "01000001"; -- Define o valor do operando de saída.
+		 wait for clk_period;
 
-      wait for clk_period*10;
+		 -- Inicia a escrita ativando o sinal ESCR_P e alterando o valor do operando de saída.
+		 ESCR_P <= '1'; -- Ativa a escrita.
+		 Operando1 <= "11000001"; -- Altera o valor do operando de saída.
+		 wait for clk_period;
 
-      -- insert stimulus here 
+		 -- Continua a escrita mantendo ESCR_P ativado e alterando o valor do operando de saída.
+		 ESCR_P <= '1'; -- Mantém a escrita ativada.
+		 Operando1 <= "00000010"; -- Altera o valor do operando de saída.
+		 wait for clk_period;
 
-      wait;
-   end process;
+		 -- Mantém a escrita ativada e altera o valor do operando de saída.
+		 ESCR_P <= '1'; -- Mantém a escrita ativada.
+		 Operando1 <= "00110010"; -- Altera o valor do operando de saída.
+		 wait for clk_period;
+
+		 -- Finaliza a escrita desativando o sinal ESCR_P e alterando o valor do operando de saída.
+		 ESCR_P <= '0'; -- Desativa a escrita.
+		 Operando1 <= "01111010"; -- Altera o valor do operando de saída.
+		 wait for clk_period;
+	end process;
 
 END;

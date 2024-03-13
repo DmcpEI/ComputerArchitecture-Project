@@ -58,15 +58,27 @@ BEGIN
 
    -- Stimulus process
    stim_proc: process
-   begin		
-      -- hold reset state for 100 ns.
-      wait for 100 ns;	
+   begin
+		 -- Mantém o estado de reset por 100 ns para garantir que o sistema esteja completamente resetado.
+		 wait for 100 ns;
 
-      wait for clk_period*10;
+		 -- Espera por 10 ciclos de clock para garantir que o sistema tenha estabilizado após o reset.
+		 wait for clk_period * 10;
 
-      -- insert stimulus here 
+		 -- Configuração inicial do registrador de controle (ESCR_PC) e da constante.
+		 ESCR_PC <= '1'; -- Ativa a escrita no registrador de controle.
+		 Constante <= "00010000"; -- Define o valor da constante.
+		 wait for clk_period * 2; -- Espera para garantir que a escrita seja realizada.
 
-      wait;
-   end process;
+		 ESCR_PC <= '0'; -- Desativa a escrita no registrador de controle.
+		 wait for clk_period * 5; -- Espera para estabilização.
+
+		 reset <= '1'; -- Ativa o sinal de reset para reiniciar o sistema.
+
+		 -- Aqui você pode inserir estímulos adicionais conforme necessário para testar o sistema.
+
+		 -- Espera infinita para manter a simulação em execução.
+		 wait;
+	end process;
 
 END;

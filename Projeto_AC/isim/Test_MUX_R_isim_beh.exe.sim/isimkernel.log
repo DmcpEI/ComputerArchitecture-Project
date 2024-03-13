@@ -2,9 +2,9 @@ Command line:
    Test_MUX_R_isim_beh.exe
      -simmode  gui
      -simrunnum  0
-     -socket  34208
+     -socket  50985
 
-Mon Mar 11 11:57:55 2024
+Mon Mar 11 16:44:05 2024
 
 
  Elaboration Time: 0.19 sec
@@ -27,9 +27,9 @@ In process Test_MUX_R.vhd:stim_proc
  
 
 
- Total Simulation Time: 0.24 sec
+ Total Simulation Time: 0.23 sec
 
  Current Memory Usage: 293.003 Meg
 
-Mon Mar 11 11:58:46 2024
+Mon Mar 11 16:44:25 2024
 

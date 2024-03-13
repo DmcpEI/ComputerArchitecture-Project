@@ -20,11 +20,11 @@ begin
 	process(ESCR_R, clk, SEL_R, Dados_R)
 	begin
 	
-		-- Se está na transição ascendente do relógio
-		if rising_edge(clk) then
-			
-			-- Se o sinal do bit menos significativo de ESCR_P está a 1
-			if ESCR_R(0) = '1' then
+		-- Se o sinal do bit menos significativo de ESCR_P está a 1
+		if ESCR_R(0) = '1' then
+	
+			-- Se está na transição ascendente do relógio
+			if rising_edge(clk) then
 				
 				-- Início da estrutura de seleção de casos dependendo do valor dos três bits menos significativos de SEL_Dados
 				case SEL_R(2 downto 0) is

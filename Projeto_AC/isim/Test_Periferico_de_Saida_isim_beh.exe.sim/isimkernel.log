@@ -1,0 +1,29 @@
+Command line:
+   Test_Periferico_de_Saida_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  37093
+
+Mon Mar 11 16:53:21 2024
+
+
+ Elaboration Time: 0.34 sec
+
+ Current Memory Usage: 215.273 Meg
+
+ Total Signals          : 8
+ Total Nets             : 18
+ Total Signal Drivers   : 4
+ Total Blocks           : 3
+ Total Primitive Blocks : 2
+ Total Processes        : 3
+ Total Traceable Variables  : 9
+ Total Scalar Nets and Variables : 379
+Total Line Count : 12
+
+ Total Simulation Time: 0.4 sec
+
+ Current Memory Usage: 292.872 Meg
+
+Mon Mar 11 16:53:59 2024
+

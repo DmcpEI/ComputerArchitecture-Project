@@ -36,8 +36,31 @@ BEGIN
 
    -- Stimulus process
    stim_proc: process
-   begin		
-	
-   end process;
+   begin
+		 -- Configuração inicial do periférico de entrada.
+		 ESCR_P <= '0'; -- Ativa a escrita no periférico de entrada.
+		 PIN <= "00000001"; -- Define o valor do pino de entrada.
+		 wait for 10 ns; -- Espera para a estabilização.
+
+		 -- Desativa a escrita e define um novo valor para o pino de entrada.
+		 ESCR_P <= '1';
+		 PIN <= "00000001";
+		 wait for 10 ns;
+
+		 -- Mantém a escrita desativada e altera o valor do pino de entrada.
+		 ESCR_P <= '1';
+		 PIN <= "00000010";
+		 wait for 10 ns;
+
+		 -- Mantém a escrita desativada e mantém o mesmo valor do pino de entrada.
+		 ESCR_P <= '1';
+		 PIN <= "00000010";
+		 wait for 10 ns;
+
+		 -- Ativa a escrita e mantém o mesmo valor do pino de entrada.
+		 ESCR_P <= '0';
+		 PIN <= "00000010";
+		 wait for 10 ns;
+	end process;
 
 END;

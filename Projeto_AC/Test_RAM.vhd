@@ -1,10 +1,6 @@
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
  
--- Uncomment the following library declaration if using
--- arithmetic functions with Signed or Unsigned values
---USE ieee.numeric_std.ALL;
- 
 ENTITY Test_RAM IS
 END Test_RAM;
  
@@ -58,15 +54,28 @@ BEGIN
 
    -- Stimulus process
    stim_proc: process
-   begin		
-      -- hold reset state for 100 ns.
-      wait for 100 ns;	
+   begin
+		 -- Configuração inicial: Ativa a escrita (WR = '1'), define a constante e o operando 1, e aguarda um período de clock.
+		 WR <= '1'; -- Ativa a escrita.
+		 Constante <= "00001111"; -- Define a constante.
+		 Operando1 <= "00010000"; -- Define o operando 1.
+		 wait for clk_period;
 
-      wait for clk_period*10;
+		 -- Continua a escrita: Ativa a escrita, define a constante e o operando 1 novamente, e aguarda um período de clock.
+		 WR <= '1'; -- Ativa a escrita.
+		 Constante <= "00000001"; -- Redefine a constante.
+		 Operando1 <= "00000100"; -- Redefine o operando 1.
+		 wait for clk_period;
 
-      -- insert stimulus here 
+		 -- Finaliza a escrita: Desativa a escrita (WR = '0'), mantém o operando 1 e aguarda 10 períodos de clock.
+		 WR <= '0'; -- Desativa a escrita.
+		 Operando1 <= "00010000"; -- Mantém o operando 1.
+		 wait for clk_period * 10;
 
-      wait;
-   end process;
+		 -- Continua sem escrita: Mantém a escrita desativada (WR = '0'), mantém o operando 1 e aguarda mais 10 períodos de clock.
+		 WR <= '0'; -- Mantém a escrita desativada.
+		 Operando1 <= "00000100"; -- Mantém o operando 1.
+		 wait for clk_period * 10;
+	end process;
 
 END;

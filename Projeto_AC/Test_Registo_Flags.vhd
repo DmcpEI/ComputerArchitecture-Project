@@ -58,15 +58,21 @@ BEGIN
 
    -- Stimulus process
    stim_proc: process
-   begin		
-      -- hold reset state for 100 ns.
-      wait for 100 ns;	
+   begin
+		 -- Configurações iniciais: Define valores para ESCR_R, SEL_FLAG e E_FLAG, e aguarda um período de clock.
+		 ESCR_R <= "00"; -- Define ESCR_R.
+		 SEL_FLAG <= "000"; -- Define SEL_FLAG.
+		 E_FLAG <= "00000"; -- Define E_FLAG.
+		 wait for clk_period;
 
-      wait for clk_period*10;
-
-      -- insert stimulus here 
-
-      wait;
-   end process;
+		 -- Continua com diferentes configurações: Altera ESCR_R, SEL_FLAG e E_FLAG, e aguarda um período de clock entre cada alteração.
+		 ESCR_R <= "10"; SEL_FLAG <= "001"; E_FLAG <= "11111"; wait for clk_period;
+		 ESCR_R <= "01"; SEL_FLAG <= "010"; E_FLAG <= "11011"; wait for clk_period;
+		 ESCR_R <= "11"; SEL_FLAG <= "010"; E_FLAG <= "11011"; wait for clk_period;
+		 ESCR_R <= "00"; SEL_FLAG <= "011"; E_FLAG <= "11011"; wait for clk_period;
+		 ESCR_R <= "11"; SEL_FLAG <= "011"; E_FLAG <= "11011"; wait for clk_period;
+		 ESCR_R <= "01"; SEL_FLAG <= "100"; E_FLAG <= "11011"; wait for clk_period;
+		 ESCR_R <= "10"; SEL_FLAG <= "100"; E_FLAG <= "01011"; wait for clk_period;
+	end process;
 
 END;

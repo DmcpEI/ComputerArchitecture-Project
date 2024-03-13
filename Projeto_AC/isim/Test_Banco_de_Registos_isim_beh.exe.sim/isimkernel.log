@@ -1,0 +1,29 @@
+Command line:
+   Test_Banco_de_Registos_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  53083
+
+Mon Mar 11 16:42:39 2024
+
+
+ Elaboration Time: 0.19 sec
+
+ Current Memory Usage: 215.413 Meg
+
+ Total Signals          : 20
+ Total Nets             : 97
+ Total Signal Drivers   : 14
+ Total Blocks           : 3
+ Total Primitive Blocks : 2
+ Total Processes        : 3
+ Total Traceable Variables  : 9
+ Total Scalar Nets and Variables : 458
+Total Line Count : 63
+
+ Total Simulation Time: 0.26 sec
+
+ Current Memory Usage: 293.011 Meg
+
+Mon Mar 11 16:43:28 2024
+

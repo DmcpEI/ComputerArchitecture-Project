@@ -1,22 +1,50 @@
-Running: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/fuse -intstyle ise -incremental -lib secureip -o /home/ise/Projects/Projeto_AC/Test_MUX_R_isim_beh.exe -prj /home/ise/Projects/Projeto_AC/Test_MUX_R_beh.prj work.Test_MUX_R 
+Running: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/fuse -intstyle ise -incremental -lib secureip -o /home/ise/Projects/Projeto_AC/Test_Placa_Mae_isim_beh.exe -prj /home/ise/Projects/Projeto_AC/Test_Placa_Mae_beh.prj work.Test_Placa_Mae 
 ISim P.20131013 (signature 0xfbc00daa)
 Number of CPUs detected in this system: 10
 Turning on mult-threading, number of parallel sub-compilation jobs: 20 
 Determining compilation order of HDL files
+Parsing VHDL file "/home/ise/Projects/Projeto_AC/ROM_de_Descodificacao.vhd" into library work
+Parsing VHDL file "/home/ise/Projects/Projeto_AC/Registo_Flags.vhd" into library work
+Parsing VHDL file "/home/ise/Projects/Projeto_AC/Periferico_de_Saida.vhd" into library work
+Parsing VHDL file "/home/ise/Projects/Projeto_AC/Periferico_de_Entrada.vhd" into library work
+Parsing VHDL file "/home/ise/Projects/Projeto_AC/PC.vhd" into library work
+Parsing VHDL file "/home/ise/Projects/Projeto_AC/NOR_Operando.vhd" into library work
 Parsing VHDL file "/home/ise/Projects/Projeto_AC/MUX_R.vhd" into library work
-Parsing VHDL file "/home/ise/Projects/Projeto_AC/Test_MUX_R.vhd" into library work
+Parsing VHDL file "/home/ise/Projects/Projeto_AC/MUX_PC.vhd" into library work
+Parsing VHDL file "/home/ise/Projects/Projeto_AC/Banco_de_Registos.vhd" into library work
+Parsing VHDL file "/home/ise/Projects/Projeto_AC/ALU.vhd" into library work
+Parsing VHDL file "/home/ise/Projects/Projeto_AC/Processador.vhd" into library work
+Parsing VHDL file "/home/ise/Projects/Projeto_AC/Memoria_de_Instrucoes.vhd" into library work
+Parsing VHDL file "/home/ise/Projects/Projeto_AC/Memoria_de_Dados.vhd" into library work
+Parsing VHDL file "/home/ise/Projects/Projeto_AC/Placa_Mae.vhd" into library work
+Parsing VHDL file "/home/ise/Projects/Projeto_AC/Test_Placa_Mae.vhd" into library work
 Starting static elaboration
 Completed static elaboration
-Fuse Memory Usage: 95308 KB
-Fuse CPU Usage: 3580 ms
+Fuse Memory Usage: 98716 KB
+Fuse CPU Usage: 3760 ms
 Compiling package standard
 Compiling package std_logic_1164
+Compiling package numeric_std
+Compiling package std_logic_arith
+Compiling package std_logic_unsigned
+Compiling architecture behavioral of entity PC [pc_default]
+Compiling architecture behavioral of entity MUX_PC [mux_pc_default]
+Compiling architecture behavioral of entity Registo_Flags [registo_flags_default]
+Compiling architecture behavioral of entity ROM_de_Descodificacao [rom_de_descodificacao_default]
 Compiling architecture behavioral of entity MUX_R [mux_r_default]
-Compiling architecture behavior of entity test_mux_r
+Compiling architecture behavioral of entity Banco_de_Registos [banco_de_registos_default]
+Compiling architecture behavioral of entity ALU [alu_default]
+Compiling architecture behavioral of entity Periferico_de_Entrada [periferico_de_entrada_default]
+Compiling architecture behavioral of entity Periferico_de_Saida [periferico_de_saida_default]
+Compiling architecture behavioral of entity NOR_Operando [nor_operando_default]
+Compiling architecture struct of entity Processador [processador_default]
+Compiling architecture behavioral of entity Memoria_de_Dados [memoria_de_dados_default]
+Compiling architecture behavioral of entity Memoria_de_Instrucoes [memoria_de_instrucoes_default]
+Compiling architecture struct of entity Placa_Mae [placa_mae_default]
+Compiling architecture behavior of entity test_placa_mae
 Time Resolution for simulation is 1ps.
-Waiting for 1 sub-compilation(s) to finish...
-Compiled 5 VHDL Units
-Built simulation executable /home/ise/Projects/Projeto_AC/Test_MUX_R_isim_beh.exe
-Fuse Memory Usage: 1445444 KB
-Fuse CPU Usage: 3730 ms
-GCC CPU Usage: 550 ms
+Compiled 34 VHDL Units
+Built simulation executable /home/ise/Projects/Projeto_AC/Test_Placa_Mae_isim_beh.exe
+Fuse Memory Usage: 1459292 KB
+Fuse CPU Usage: 4720 ms
+GCC CPU Usage: 3920 ms

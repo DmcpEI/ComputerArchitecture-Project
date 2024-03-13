@@ -47,14 +47,17 @@ BEGIN
    stim_proc: process
    begin		
 	
+		-- Configuração dos valores iniciais para as entradas
 		Dados_IN <= "00001100"; Dados_M <= "00000001"; Resultado <= "00101001"; Constante <= "00001001"; 
 		
+		-- Sinal SEL_Dados
 		SEL_Dados <= "00"; wait for 10 ns;
 		SEL_Dados <= "01"; wait for 10 ns;
 		SEL_Dados <= "10"; wait for 10 ns;
 		SEL_Dados <= "11"; wait for 10 ns;
 		
-      assert FALSE Report "Simulation Finished" severity FAILURE;
+		-- Assert utilizado para garantir que a simulação não chegue ao fim, indicando que ela foi concluída
+		assert FALSE Report "Simulation Finished" severity FAILURE;
 	
    end process;
 

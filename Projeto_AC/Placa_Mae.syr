@@ -5,7 +5,7 @@ Parameter TMPDIR set to xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.18 secs
+Total CPU time to Xst completion: 0.19 secs
  
 --> 
 Parameter xsthdpdir set to xst
@@ -232,7 +232,7 @@ Unit <PC> synthesized.
 
 Synthesizing Unit <MUX_PC>.
     Related source file is "/home/ise/Projects/Projeto_AC/MUX_PC.vhd".
-WARNING:Xst:647 - Input <NOR_Operando1> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <Operando1<6:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Summary:
 	no macro.
 Unit <MUX_PC> synthesized.
@@ -356,7 +356,6 @@ WARNING:Xst:737 - Found 1-bit latch for signal <Dados_M<7>>. Latches may be gene
     Summary:
 	inferred   1 RAM(s).
 	inferred   8 Latch(s).
-	inferred   8 Multiplexer(s).
 Unit <Memoria_de_Dados> synthesized.
 
 Synthesizing Unit <Memoria_de_Instrucoes>.
@@ -385,8 +384,7 @@ Macro Statistics
 # Comparators                                          : 3
  8-bit comparator equal                                : 1
  8-bit comparator greater                              : 2
-# Multiplexers                                         : 23
- 1-bit 2-to-1 multiplexer                              : 8
+# Multiplexers                                         : 15
  1-bit 5-to-1 multiplexer                              : 1
  1-bit 8-to-1 multiplexer                              : 8
  8-bit 2-to-1 multiplexer                              : 2
@@ -402,8 +400,6 @@ Macro Statistics
 *                       Advanced HDL Synthesis                          *
 =========================================================================
 
-WARNING:Xst:1290 - Hierarchical block <NOR_Operando_P> is unconnected in block <Processador_PM>.
-   It will be removed from the design.
 INFO:Xst:2261 - The FF/Latch <contagem_0> in Unit <PC_P> is equivalent to the following FF/Latch, which will be removed : <Endereco_0> 
 INFO:Xst:2261 - The FF/Latch <contagem_1> in Unit <PC_P> is equivalent to the following FF/Latch, which will be removed : <Endereco_1> 
 INFO:Xst:2261 - The FF/Latch <contagem_2> in Unit <PC_P> is equivalent to the following FF/Latch, which will be removed : <Endereco_2> 
@@ -499,6 +495,8 @@ Optimizing unit <Periferico_de_Entrada> ...
 
 Optimizing unit <Periferico_de_Saida> ...
 
+Optimizing unit <Memoria_de_Dados> ...
+
 Optimizing unit <Placa_Mae> ...
 
 Optimizing unit <Processador> ...
@@ -508,8 +506,6 @@ Optimizing unit <Banco_de_Registos> ...
 Optimizing unit <PC> ...
 
 Optimizing unit <ALU> ...
-
-Optimizing unit <Memoria_de_Dados> ...
 WARNING:Xst:2677 - Node <Processador_PM/PC_P/contagem_7> of sequential type is unconnected in block <Placa_Mae>.
 WARNING:Xst:2677 - Node <Processador_PM/PC_P/contagem_6> of sequential type is unconnected in block <Placa_Mae>.
 WARNING:Xst:2677 - Node <Processador_PM/PC_P/contagem_5> of sequential type is unconnected in block <Placa_Mae>.
@@ -563,10 +559,10 @@ Top Level Output File Name         : Placa_Mae.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 236
+# BELS                             : 228
 #      GND                         : 1
 #      LUT2                        : 25
-#      LUT3                        : 23
+#      LUT3                        : 15
 #      LUT4                        : 24
 #      LUT5                        : 40
 #      LUT6                        : 68
@@ -595,16 +591,16 @@ Selected Device : 7a100tcsg324-3
 
 Slice Logic Utilization: 
  Number of Slice Registers:              81  out of  126800     0%  
- Number of Slice LUTs:                  212  out of  63400     0%  
-    Number used as Logic:               180  out of  63400     0%  
+ Number of Slice LUTs:                  204  out of  63400     0%  
+    Number used as Logic:               172  out of  63400     0%  
     Number used as Memory:               32  out of  19000     0%  
        Number used as RAM:               32
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    246
-   Number with an unused Flip Flop:     165  out of    246    67%  
-   Number with an unused LUT:            34  out of    246    13%  
-   Number of fully used LUT-FF pairs:    47  out of    246    19%  
+ Number of LUT Flip Flop pairs used:    238
+   Number with an unused Flip Flop:     157  out of    238    65%  
+   Number with an unused LUT:            34  out of    238    14%  
+   Number of fully used LUT-FF pairs:    47  out of    238    19%  
    Number of unique control sets:        14
 
 IO Utilization: 
@@ -636,12 +632,13 @@ Clock Information:
 -----------------------------------------------------------------------------+-----------------------------------------------------------+-------+
 Clock Signal                                                                 | Clock buffer(FF name)                                     | Load  |
 -----------------------------------------------------------------------------+-----------------------------------------------------------+-------+
-clk                                                                          | BUFGP                                                     | 76    |
+clk                                                                          | BUFGP                                                     | 68    |
 Processador_PM/ESCR_P(Processador_PM/ROM_de_Descodificacao_P/Mram__n004541:O)| NONE(*)(Processador_PM/Periferico_de_Entrada_P/Dados_IN_7)| 8     |
 Processador_PM/ALU_P/_n0126<0>(Processador_PM/ALU_P/_n0126<0>1:O)            | NONE(*)(Processador_PM/ALU_P/operacao_0)                  | 8     |
 Processador_PM/ESCR_R<1>(Processador_PM/ESCR_R<1>1:O)                        | NONE(*)(Processador_PM/ALU_P/E_FLAG_2)                    | 5     |
+WR(Processador_PM/ROM_de_Descodificacao_P/Mram__n004591:O)                   | NONE(*)(Memoria_de_Dados_PM/Dados_M_7)                    | 8     |
 -----------------------------------------------------------------------------+-----------------------------------------------------------+-------+
-(*) These 3 clock signal(s) are generated by combinatorial logic,
+(*) These 4 clock signal(s) are generated by combinatorial logic,
 and XST is not able to identify which are the primary clock signals.
 Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
 INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
@@ -666,7 +663,7 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
   Clock period: 4.304ns (frequency: 232.358MHz)
-  Total number of paths / destination ports: 54148 / 198
+  Total number of paths / destination ports: 53647 / 190
 -------------------------------------------------------------------------
 Delay:               4.304ns (Levels of Logic = 14)
   Source:            Processador_PM/PC_P/contagem_3 (FF)
@@ -774,7 +771,15 @@ Clock to Setup on destination clock Processador_PM/ESCR_R<1>
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |         |         |    4.409|         |
+clk            |         |         |    4.404|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock WR
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    1.844|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock clk
@@ -785,21 +790,22 @@ Source Clock                  |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 Processador_PM/ALU_P/_n0126<0>|         |    1.270|         |         |
 Processador_PM/ESCR_P         |    2.176|         |         |         |
 Processador_PM/ESCR_R<1>      |         |    0.759|         |         |
+WR                            |    2.092|         |         |         |
 clk                           |    4.304|         |         |         |
 ------------------------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 33.00 secs
-Total CPU time to Xst completion: 32.80 secs
+Total REAL time to Xst completion: 32.00 secs
+Total CPU time to Xst completion: 31.68 secs
  
 --> 
 
 
-Total memory usage is 605956 kilobytes
+Total memory usage is 606036 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   65 (   0 filtered)
+Number of warnings :   64 (   0 filtered)
 Number of infos    :   22 (   0 filtered)
 

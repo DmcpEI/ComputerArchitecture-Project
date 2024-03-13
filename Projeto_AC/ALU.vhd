@@ -26,17 +26,17 @@ begin
 		case SEL_ALU is
 		
 			-- Atribui o valor da operação á variável operacao dependendo do valor de SEL_ALU
-			when "0000" => operacao := (Operando1 + Operando2);
-			when "0001" => operacao := (Operando1 - Operando2);
-			when "0010" => operacao := (Operando1 and Operando2);
-			when "0011" => operacao := (Operando1 nand Operando2);
-			when "0100" => operacao := (Operando1 or Operando2);
-			when "0101" => operacao := (Operando1 nor Operando2);
-			when "0110" => operacao := (Operando1 xor Operando2);
-			when "0111" => operacao := (Operando1 xnor Operando2);
+			when "0000" => Resultado <= Operando1 + Operando;
+			when "0001" => Resultado <= Operando1 - Operando2;
+			when "0010" => Resultado <= Operando1 and Operando2;
+			when "0011" => Resultado <= Operando1 nand Operando2;
+			when "0100" => Resultado <= Operando1 or Operando2;
+			when "0101" => Resultado <= Operando1 nor Operando2;
+			when "0110" => Resultado <= Operando1 xor Operando2;
+			when "0111" => Resultado <= Operando1 xnor Operando2;
 			-- Atribui o valor da 1 ao bit de E_FLAG dependendo da comparação
 			when "1000" =>
-				E_FLAG <= (others => '0');
+				--E_FLAG <= (others => '0');
             
             if (Operando1 < Operando2) then
                 E_FLAG(0) <= '1';
@@ -54,11 +54,9 @@ begin
                 E_FLAG(4) <= '1';
             end if;
 			-- Para qualquer outro valor de SEL_ALU, atribui 'X' a E_FLAG
-			when others => E_FLAG <= (others => 'X');
+			when others => E_FLAG <= (others => 'X'); Resultado <= (others => 'X');
+			
 		end case;
-		
-		-- Atribui o valor da variável operacao á saída Resultado
-		Resultado <= operacao;
 	
 	end process;
 

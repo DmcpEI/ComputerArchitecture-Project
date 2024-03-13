@@ -1,0 +1,2 @@
+vhdl isim_temp "ROM_de_Descodificacao.vhd"
+vhdl isim_temp "Test_ROM.vhd"

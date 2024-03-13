@@ -5,14 +5,14 @@ Parameter TMPDIR set to /home/ise/Projects/Projeto_AC/xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.18 secs
+Total CPU time to Xst completion: 0.20 secs
  
 --> 
 Parameter xsthdpdir set to /home/ise/Projects/Projeto_AC/xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.19 secs
+Total CPU time to Xst completion: 0.21 secs
  
 --> 
 Reading design: Banco_de_Registos.prj
@@ -48,12 +48,12 @@ Parsing architecture <Behavioral> of entity <banco_de_registos>.
 
 
 Total REAL time to Xst completion: 20.00 secs
-Total CPU time to Xst completion: 20.08 secs
+Total CPU time to Xst completion: 20.20 secs
  
 --> 
 
 
-Total memory usage is 431704 kilobytes
+Total memory usage is 431716 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    0 (   0 filtered)

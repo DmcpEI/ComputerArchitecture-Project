@@ -1,0 +1,2 @@
+vhdl isim_temp "Periferico_de_Entrada.vhd"
+vhdl isim_temp "Test_Periferico_de_Entrada.vhd"

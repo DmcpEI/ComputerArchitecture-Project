@@ -52,6 +52,58 @@ BEGIN
    -- Stimulus process
    stim_proc: process
    begin		
+	
+		--Periféricos 
+			-- LDP Ri
+			opcode <= "00000"; wait for 10 ns;
+			-- STP Ri
+			opcode <= "00001"; wait for 10 ns;
+			
+		--Leitura e Escrita
+			-- LD Ri, constante
+			opcode <= "00010"; wait for 10 ns;
+			-- LD Ri, [constante]
+			opcode <= "00011"; wait for 10 ns;
+			-- ST [constante], Ri
+			opcode <= "00100"; wait for 10 ns;
+			
+		--Lógica e Aritmética
+			-- ADD Ri, Rj
+			opcode <= "00101"; wait for 10 ns;
+			-- SUB Ri, Rj
+			opcode <= "00110"; wait for 10 ns;
+			-- AND Ri, Rj
+			opcode <= "00111"; wait for 10 ns;
+			-- NAND Ri, Rj
+			opcode <= "01000"; wait for 10 ns;
+			-- OR Ri, Rj
+			opcode <= "01001"; wait for 10 ns;
+			-- NOR Ri, Rj
+			opcode <= "01010"; wait for 10 ns;
+			-- XOR Ri, Rj
+			opcode <= "01011"; wait for 10 ns;
+			-- XNOR Ri, Rj
+			opcode <= "01100"; wait for 10 ns;
+			-- CMP Ri, Rj
+			opcode <= "01101"; wait for 10 ns;
+			
+		--Salto
+			-- JL constante
+			opcode <= "01110"; wait for 10 ns;
+			-- JLE constante
+			opcode <= "01111"; wait for 10 ns;
+			-- JE constante
+			opcode <= "10000"; wait for 10 ns;
+			-- JGE constante
+			opcode <= "10001"; wait for 10 ns;
+			-- JG constante
+			opcode <= "10010"; wait for 10 ns;
+			-- JMP constante
+			opcode <= "10011"; wait for 10 ns;
+			-- JZ Ri, constante
+			opcode <= "10100"; wait for 10 ns;
+			-- JN, Ri, constante
+			opcode <= "10101"; wait for 10 ns;
 
    end process;
 

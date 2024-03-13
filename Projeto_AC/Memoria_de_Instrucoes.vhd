@@ -26,7 +26,7 @@ begin
 			-- LD R0, 1
 			when "00000011" => opcode <= "00010"; SEL_R <= "XXX000"; Constante <= "00000001";
 			-- LD R1, -1
-			when "00000100" => opcode <= "00010"; SEL_R <= "XXX001"; Constante <= "11111110";
+			when "00000100" => opcode <= "00010"; SEL_R <= "XXX001"; Constante <= "11111111";
 			-- LD R2, 20
 			when "00000101" => opcode <= "00010"; SEL_R <= "XXX010"; Constante <= "00010100";
 			-- LD R3, 6
@@ -56,7 +56,7 @@ begin
 			-- JMP 15
 			when "00010010" => opcode <= "10011"; SEL_R <= "XXXXXX"; Constante <= "00001111";
 			-- LD R4, -15
-			when "00010011" => opcode <= "00010"; SEL_R <= "XXX100"; Constante <= "11110000";
+			when "00010011" => opcode <= "00010"; SEL_R <= "XXX100"; Constante <= "11110001";
 			-- ADD R7, R4
 			when "00010100" => opcode <= "00101"; SEL_R <= "100111"; Constante <= "XXXXXXXX";
 			-- JMP 25
@@ -66,7 +66,7 @@ begin
 			-- JMP 25
 			when "00010111" => opcode <= "10011"; SEL_R <= "XXXXXX"; Constante <= "00011001";
 			-- LD R7, -1
-			when "00011000" => opcode <= "00010"; SEL_R <= "XXX111"; Constante <= "11111110";
+			when "00011000" => opcode <= "00010"; SEL_R <= "XXX111"; Constante <= "11111111";
 			-- STP R7
 			when "00011001" => opcode <= "00001"; SEL_R <= "XXX111"; Constante <= "XXXXXXXX";
 			-- JMP 26

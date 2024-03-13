@@ -1,0 +1,2 @@
+vhdl isim_temp "Registo_Flags.vhd"
+vhdl isim_temp "Test_Registo_Flags.vhd"
