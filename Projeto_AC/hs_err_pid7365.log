@@ -1,0 +1,13 @@
+#
+# An unexpected error has occurred (11)
+#
+Stack:
+/opt/Xilinx/14.7/ISE_DS/PlanAhead/tps/lnx64/jre/lib/amd64/server/libjvm.so(+0x744749) [0x7f6864357749]
+/opt/Xilinx/14.7/ISE_DS/PlanAhead/tps/lnx64/jre/lib/amd64/server/libjvm.so(JVM_handle_linux_signal+0xa7) [0x7f686435bfb7]
+/lib64/libpthread.so.0() [0x3b28a0f7e0]
+/opt/Xilinx/14.7/ISE_DS/PlanAhead/tps/lnx64/jre/lib/amd64/server/libjvm.so(+0x486b07) [0x7f6864099b07]
+/opt/Xilinx/14.7/ISE_DS/PlanAhead/tps/lnx64/jre/lib/amd64/server/libjvm.so(+0x55af39) [0x7f686416df39]
+/opt/Xilinx/14.7/ISE_DS/PlanAhead/tps/lnx64/jre/lib/amd64/server/libjvm.so(+0x55b464) [0x7f686416e464]
+/opt/Xilinx/14.7/ISE_DS/PlanAhead/tps/lnx64/jre/lib/amd64/server/libjvm.so(JVM_FillInStackTrace+0xa6) [0x7f68641be646]
+/opt/Xilinx/14.7/ISE_DS/PlanAhead/tps/lnx64/jre/lib/amd64/libjava.so(Java_java_lang_Throwable_fillInStackTrace+0x11) [0x7f68637ec6f1]
+[0x7f685d54b9c8]

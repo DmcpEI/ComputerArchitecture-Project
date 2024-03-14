@@ -7,3 +7,8 @@ xst -intstyle ise -ifn "/home/ise/Projects/Projeto_AC/Placa_Mae.xst" -ofn "/home
 xst -intstyle ise -ifn "/home/ise/Projects/Projeto_AC/Placa_Mae.xst" -ofn "/home/ise/Projects/Projeto_AC/Placa_Mae.syr" 
 xst -intstyle ise -ifn "/home/ise/Projects/Projeto_AC/Placa_Mae.xst" -ofn "/home/ise/Projects/Projeto_AC/Placa_Mae.syr" 
 xst -intstyle ise -ifn "/home/ise/Projects/Projeto_AC/Placa_Mae.xst" -ofn "/home/ise/Projects/Projeto_AC/Placa_Mae.syr" 
+xst -intstyle ise -ifn "/home/ise/Projects/Projeto_AC/Placa_Mae.xst" -ofn "/home/ise/Projects/Projeto_AC/Placa_Mae.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Placa_Mae.ucf -p xc6slx16-csg324-3 Placa_Mae.ngc Placa_Mae.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Placa_Mae_map.ncd Placa_Mae.ngd Placa_Mae.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Placa_Mae.ucf -p xc6slx16-csg324-3 Placa_Mae.ngc Placa_Mae.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Placa_Mae_map.ncd Placa_Mae.ngd Placa_Mae.pcf 

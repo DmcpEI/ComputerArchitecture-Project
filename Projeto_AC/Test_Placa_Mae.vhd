@@ -59,17 +59,17 @@ BEGIN
 
 		-- PIN a -21 e menos
 		reset <= '1'; wait for clk_period*10;
-		reset <= '0'; PIN <= "11101011"; wait for clk_period*60; -- -21
+		reset <= '0'; PIN <= "11000100"; wait for clk_period*60; -- -60
 		reset <= '1'; wait for clk_period*10;
-		reset <= '0'; PIN <= "11101010"; wait for clk_period*60; -- -22
-		reset <= '1'; wait for clk_period*10;
-		reset <= '0'; PIN <= "11101001"; wait for clk_period*60; -- -23
+		reset <= '0'; PIN <= "11011001"; wait for clk_period*60; -- -39
 		reset <= '1'; wait for clk_period*10;
 		reset <= '0'; PIN <= "11101000"; wait for clk_period*60; -- -24
 		reset <= '1'; wait for clk_period*10;
-		reset <= '0'; PIN <= "11011000"; wait for clk_period*60; -- -40
+		reset <= '0'; PIN <= "11101001"; wait for clk_period*60; -- -23
 		reset <= '1'; wait for clk_period*10;
-		reset <= '0'; PIN <= "11000100"; wait for clk_period*60; -- -60
+		reset <= '0'; PIN <= "11101010"; wait for clk_period*60; -- -22
+		reset <= '1'; wait for clk_period*10;
+		reset <= '0'; PIN <= "11101011"; wait for clk_period*60; -- -21
 
 		-- PIN no mínimo sem overflow (-16) e quando dá overflow
 		reset <= '1'; wait for clk_period*10;

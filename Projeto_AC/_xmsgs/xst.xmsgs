@@ -5,230 +5,172 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="info" file="Xst" num="1561" delta="new" >&quot;<arg fmt="%s" index="1">/home/ise/Projects/Projeto_AC/MUX_R.vhd</arg>&quot; line <arg fmt="%d" index="2">26</arg>: Mux is complete : default of case is discarded
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"/home/ise/Projects/Projeto_AC/Memoria_de_Dados.vhd" Line 37: <arg fmt="%s" index="1">mem</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="Xst" num="819" delta="new" >&quot;<arg fmt="%s" index="1">/home/ise/Projects/Projeto_AC/Memoria_de_Dados.vhd</arg>&quot; line <arg fmt="%d" index="2">20</arg>: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
-<arg fmt="%s" index="3">&lt;Mem&gt;</arg>
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">ESCR_R&lt;0:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="737" delta="new" >Found <arg fmt="%d" index="1">8</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">Dados_M</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">ESCR_R&lt;1:1&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">ESCR_R&lt;0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="Xst" num="737" delta="new" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">Resultado&lt;6&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">ESCR_R&lt;1&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="Xst" num="737" delta="new" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">Resultado&lt;5&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 </msg>
 
-<msg type="warning" file="Xst" num="737" delta="new" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">E_FLAG_0</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+<msg type="warning" file="Xst" num="737" delta="new" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">Resultado&lt;4&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 </msg>
 
-<msg type="warning" file="Xst" num="737" delta="new" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">E_FLAG_1</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+<msg type="warning" file="Xst" num="737" delta="new" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">Resultado&lt;3&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 </msg>
 
-<msg type="warning" file="Xst" num="737" delta="new" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">E_FLAG_2</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+<msg type="warning" file="Xst" num="737" delta="new" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">Resultado&lt;2&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 </msg>
 
-<msg type="warning" file="Xst" num="737" delta="new" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">E_FLAG_3</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+<msg type="warning" file="Xst" num="737" delta="new" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">Resultado&lt;1&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 </msg>
 
-<msg type="warning" file="Xst" num="737" delta="new" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">E_FLAG_4</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+<msg type="warning" file="Xst" num="737" delta="new" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">Resultado&lt;0&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 </msg>
 
-<msg type="warning" file="Xst" num="737" delta="new" >Found <arg fmt="%d" index="1">8</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">Resultado</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+<msg type="warning" file="Xst" num="737" delta="new" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">E_FLAG&lt;4&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 </msg>
 
-<msg type="info" file="Xst" num="2371" delta="new" >HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+<msg type="warning" file="Xst" num="737" delta="new" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">E_FLAG&lt;3&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 </msg>
 
-<msg type="warning" file="Xst" num="737" delta="new" >Found <arg fmt="%d" index="1">8</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">Dados_IN</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+<msg type="warning" file="Xst" num="737" delta="new" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">E_FLAG&lt;2&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 </msg>
 
-<msg type="info" file="Xst" num="1767" delta="new" >HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+<msg type="warning" file="Xst" num="737" delta="new" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">E_FLAG&lt;1&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">contagem_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">PC_P</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;Endereco_0&gt; </arg>
+<msg type="warning" file="Xst" num="737" delta="new" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">E_FLAG&lt;0&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">contagem_1</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">PC_P</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;Endereco_1&gt; </arg>
+<msg type="warning" file="Xst" num="737" delta="new" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">Resultado&lt;7&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">contagem_2</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">PC_P</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;Endereco_2&gt; </arg>
+<msg type="warning" file="Xst" num="737" delta="new" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">Dados_IN&lt;6&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">contagem_3</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">PC_P</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;Endereco_3&gt; </arg>
+<msg type="warning" file="Xst" num="737" delta="new" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">Dados_IN&lt;5&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">contagem_4</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">PC_P</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;Endereco_4&gt; </arg>
+<msg type="warning" file="Xst" num="737" delta="new" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">Dados_IN&lt;4&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">contagem_5</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">PC_P</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;Endereco_5&gt; </arg>
+<msg type="warning" file="Xst" num="737" delta="new" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">Dados_IN&lt;3&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">contagem_6</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">PC_P</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;Endereco_6&gt; </arg>
+<msg type="warning" file="Xst" num="737" delta="new" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">Dados_IN&lt;2&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">contagem_7</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">PC_P</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;Endereco_7&gt; </arg>
+<msg type="warning" file="Xst" num="737" delta="new" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">Dados_IN&lt;1&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 </msg>
 
-<msg type="info" file="Xst" num="3218" delta="new" >HDL ADVISOR - The RAM &lt;<arg fmt="%s" index="1">Mram_Mem</arg>&gt; will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+<msg type="warning" file="Xst" num="737" delta="new" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">Dados_IN&lt;0&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">contagem_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">PC</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;Endereco_0&gt; </arg>
+<msg type="warning" file="Xst" num="737" delta="new" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">Dados_IN&lt;7&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">contagem_1</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">PC</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;Endereco_1&gt; </arg>
+<msg type="warning" file="Xst" num="737" delta="new" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">Dados_M&lt;6&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">contagem_2</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">PC</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;Endereco_2&gt; </arg>
+<msg type="warning" file="Xst" num="737" delta="new" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">Dados_M&lt;5&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">contagem_3</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">PC</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;Endereco_3&gt; </arg>
+<msg type="warning" file="Xst" num="737" delta="new" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">Dados_M&lt;4&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">contagem_4</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">PC</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;Endereco_4&gt; </arg>
+<msg type="warning" file="Xst" num="737" delta="new" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">Dados_M&lt;3&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">contagem_5</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">PC</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;Endereco_5&gt; </arg>
+<msg type="warning" file="Xst" num="737" delta="new" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">Dados_M&lt;2&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">contagem_6</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">PC</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;Endereco_6&gt; </arg>
+<msg type="warning" file="Xst" num="737" delta="new" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">Dados_M&lt;1&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">contagem_7</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">PC</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;Endereco_7&gt; </arg>
+<msg type="warning" file="Xst" num="737" delta="new" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">Dados_M&lt;0&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Processador_PM/PC_P/contagem_5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Placa_Mae</arg>&gt;.
+<msg type="warning" file="Xst" num="737" delta="new" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">Dados_M&lt;7&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Processador_PM/PC_P/contagem_6</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Placa_Mae</arg>&gt;.
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">contagem_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">PC_P</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;Endereco_0&gt; </arg>
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Processador_PM/PC_P/contagem_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Placa_Mae</arg>&gt;.
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">contagem_1</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">PC_P</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;Endereco_1&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2399" delta="new" >RAMs &lt;<arg fmt="%s" index="1">Memoria_de_Dados_PM/Mram_Mem4</arg>&gt;, &lt;<arg fmt="%s" index="2">Memoria_de_Dados_PM/Mram_Mem2</arg>&gt; are equivalent, second RAM is removed
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">contagem_2</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">PC_P</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;Endereco_2&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2399" delta="new" >RAMs &lt;<arg fmt="%s" index="1">Memoria_de_Dados_PM/Mram_Mem4</arg>&gt;, &lt;<arg fmt="%s" index="2">Memoria_de_Dados_PM/Mram_Mem3</arg>&gt; are equivalent, second RAM is removed
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">contagem_3</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">PC_P</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;Endereco_3&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2399" delta="new" >RAMs &lt;<arg fmt="%s" index="1">Memoria_de_Dados_PM/Mram_Mem4</arg>&gt;, &lt;<arg fmt="%s" index="2">Memoria_de_Dados_PM/Mram_Mem5</arg>&gt; are equivalent, second RAM is removed
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">contagem_4</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">PC_P</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;Endereco_4&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2399" delta="new" >RAMs &lt;<arg fmt="%s" index="1">Memoria_de_Dados_PM/Mram_Mem4</arg>&gt;, &lt;<arg fmt="%s" index="2">Memoria_de_Dados_PM/Mram_Mem6</arg>&gt; are equivalent, second RAM is removed
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">contagem_5</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">PC_P</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;Endereco_5&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2399" delta="new" >RAMs &lt;<arg fmt="%s" index="1">Memoria_de_Dados_PM/Mram_Mem4</arg>&gt;, &lt;<arg fmt="%s" index="2">Memoria_de_Dados_PM/Mram_Mem7</arg>&gt; are equivalent, second RAM is removed
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">contagem_6</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">PC_P</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;Endereco_6&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2399" delta="new" >RAMs &lt;<arg fmt="%s" index="1">Memoria_de_Dados_PM/Mram_Mem10</arg>&gt;, &lt;<arg fmt="%s" index="2">Memoria_de_Dados_PM/Mram_Mem11</arg>&gt; are equivalent, second RAM is removed
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">contagem_7</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">PC_P</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;Endereco_7&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2399" delta="new" >RAMs &lt;<arg fmt="%s" index="1">Memoria_de_Dados_PM/Mram_Mem10</arg>&gt;, &lt;<arg fmt="%s" index="2">Memoria_de_Dados_PM/Mram_Mem12</arg>&gt; are equivalent, second RAM is removed
+<msg type="info" file="Xst" num="3218" delta="new" >HDL ADVISOR - The RAM &lt;<arg fmt="%s" index="1">Mram_registos</arg>&gt; will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
 </msg>
 
-<msg type="info" file="Xst" num="2399" delta="new" >RAMs &lt;<arg fmt="%s" index="1">Memoria_de_Dados_PM/Mram_Mem10</arg>&gt;, &lt;<arg fmt="%s" index="2">Memoria_de_Dados_PM/Mram_Mem13</arg>&gt; are equivalent, second RAM is removed
+<msg type="info" file="Xst" num="3218" delta="old" >HDL ADVISOR - The RAM &lt;<arg fmt="%s" index="1">Mram_Mem</arg>&gt; will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
 </msg>
 
-<msg type="info" file="Xst" num="2399" delta="new" >RAMs &lt;<arg fmt="%s" index="1">Memoria_de_Dados_PM/Mram_Mem10</arg>&gt;, &lt;<arg fmt="%s" index="2">Memoria_de_Dados_PM/Mram_Mem14</arg>&gt; are equivalent, second RAM is removed
+<msg type="info" file="Xst" num="3231" delta="new" >The small RAM &lt;<arg fmt="%s" index="1">Mram__n0240</arg>&gt; will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
 </msg>
 
-<msg type="info" file="Xst" num="2399" delta="new" >RAMs &lt;<arg fmt="%s" index="1">Memoria_de_Dados_PM/Mram_Mem10</arg>&gt;, &lt;<arg fmt="%s" index="2">Memoria_de_Dados_PM/Mram_Mem15</arg>&gt; are equivalent, second RAM is removed
+<msg type="info" file="Xst" num="3218" delta="new" >HDL ADVISOR - The RAM &lt;<arg fmt="%s" index="1">Mram__n0045</arg>&gt; will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
 </msg>
 
-<msg type="info" file="Xst" num="2399" delta="new" >RAMs &lt;<arg fmt="%s" index="1">Memoria_de_Dados_PM/Mram_Mem18</arg>&gt;, &lt;<arg fmt="%s" index="2">Memoria_de_Dados_PM/Mram_Mem19</arg>&gt; are equivalent, second RAM is removed
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">contagem_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">PC</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;Endereco_0&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2399" delta="new" >RAMs &lt;<arg fmt="%s" index="1">Memoria_de_Dados_PM/Mram_Mem18</arg>&gt;, &lt;<arg fmt="%s" index="2">Memoria_de_Dados_PM/Mram_Mem20</arg>&gt; are equivalent, second RAM is removed
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">contagem_1</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">PC</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;Endereco_1&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2399" delta="new" >RAMs &lt;<arg fmt="%s" index="1">Memoria_de_Dados_PM/Mram_Mem18</arg>&gt;, &lt;<arg fmt="%s" index="2">Memoria_de_Dados_PM/Mram_Mem23</arg>&gt; are equivalent, second RAM is removed
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">contagem_2</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">PC</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;Endereco_2&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2399" delta="new" >RAMs &lt;<arg fmt="%s" index="1">Memoria_de_Dados_PM/Mram_Mem18</arg>&gt;, &lt;<arg fmt="%s" index="2">Memoria_de_Dados_PM/Mram_Mem21</arg>&gt; are equivalent, second RAM is removed
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">contagem_3</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">PC</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;Endereco_3&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2399" delta="new" >RAMs &lt;<arg fmt="%s" index="1">Memoria_de_Dados_PM/Mram_Mem18</arg>&gt;, &lt;<arg fmt="%s" index="2">Memoria_de_Dados_PM/Mram_Mem22</arg>&gt; are equivalent, second RAM is removed
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">contagem_4</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">PC</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;Endereco_4&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2399" delta="new" >RAMs &lt;<arg fmt="%s" index="1">Memoria_de_Dados_PM/Mram_Mem28</arg>&gt;, &lt;<arg fmt="%s" index="2">Memoria_de_Dados_PM/Mram_Mem26</arg>&gt; are equivalent, second RAM is removed
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">contagem_5</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">PC</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;Endereco_5&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2399" delta="new" >RAMs &lt;<arg fmt="%s" index="1">Memoria_de_Dados_PM/Mram_Mem28</arg>&gt;, &lt;<arg fmt="%s" index="2">Memoria_de_Dados_PM/Mram_Mem27</arg>&gt; are equivalent, second RAM is removed
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">contagem_6</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">PC</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;Endereco_6&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2399" delta="new" >RAMs &lt;<arg fmt="%s" index="1">Memoria_de_Dados_PM/Mram_Mem28</arg>&gt;, &lt;<arg fmt="%s" index="2">Memoria_de_Dados_PM/Mram_Mem29</arg>&gt; are equivalent, second RAM is removed
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">contagem_7</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">PC</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;Endereco_7&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2399" delta="new" >RAMs &lt;<arg fmt="%s" index="1">Memoria_de_Dados_PM/Mram_Mem28</arg>&gt;, &lt;<arg fmt="%s" index="2">Memoria_de_Dados_PM/Mram_Mem30</arg>&gt; are equivalent, second RAM is removed
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Processador_PM/PC_P/contagem_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Placa_Mae</arg>&gt;.
 </msg>
 
-<msg type="info" file="Xst" num="2399" delta="new" >RAMs &lt;<arg fmt="%s" index="1">Memoria_de_Dados_PM/Mram_Mem28</arg>&gt;, &lt;<arg fmt="%s" index="2">Memoria_de_Dados_PM/Mram_Mem31</arg>&gt; are equivalent, second RAM is removed
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Processador_PM/PC_P/contagem_6</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Placa_Mae</arg>&gt;.
 </msg>
 
-<msg type="info" file="Xst" num="2399" delta="new" >RAMs &lt;<arg fmt="%s" index="1">Memoria_de_Dados_PM/Mram_Mem34</arg>&gt;, &lt;<arg fmt="%s" index="2">Memoria_de_Dados_PM/Mram_Mem37</arg>&gt; are equivalent, second RAM is removed
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Processador_PM/PC_P/contagem_5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Placa_Mae</arg>&gt;.
 </msg>
 
-<msg type="info" file="Xst" num="2399" delta="new" >RAMs &lt;<arg fmt="%s" index="1">Memoria_de_Dados_PM/Mram_Mem34</arg>&gt;, &lt;<arg fmt="%s" index="2">Memoria_de_Dados_PM/Mram_Mem35</arg>&gt; are equivalent, second RAM is removed
-</msg>
-
-<msg type="info" file="Xst" num="2399" delta="new" >RAMs &lt;<arg fmt="%s" index="1">Memoria_de_Dados_PM/Mram_Mem34</arg>&gt;, &lt;<arg fmt="%s" index="2">Memoria_de_Dados_PM/Mram_Mem36</arg>&gt; are equivalent, second RAM is removed
-</msg>
-
-<msg type="info" file="Xst" num="2399" delta="new" >RAMs &lt;<arg fmt="%s" index="1">Memoria_de_Dados_PM/Mram_Mem34</arg>&gt;, &lt;<arg fmt="%s" index="2">Memoria_de_Dados_PM/Mram_Mem38</arg>&gt; are equivalent, second RAM is removed
-</msg>
-
-<msg type="info" file="Xst" num="2399" delta="new" >RAMs &lt;<arg fmt="%s" index="1">Memoria_de_Dados_PM/Mram_Mem34</arg>&gt;, &lt;<arg fmt="%s" index="2">Memoria_de_Dados_PM/Mram_Mem39</arg>&gt; are equivalent, second RAM is removed
-</msg>
-
-<msg type="info" file="Xst" num="2399" delta="new" >RAMs &lt;<arg fmt="%s" index="1">Memoria_de_Dados_PM/Mram_Mem42</arg>&gt;, &lt;<arg fmt="%s" index="2">Memoria_de_Dados_PM/Mram_Mem43</arg>&gt; are equivalent, second RAM is removed
-</msg>
-
-<msg type="info" file="Xst" num="2399" delta="new" >RAMs &lt;<arg fmt="%s" index="1">Memoria_de_Dados_PM/Mram_Mem42</arg>&gt;, &lt;<arg fmt="%s" index="2">Memoria_de_Dados_PM/Mram_Mem44</arg>&gt; are equivalent, second RAM is removed
-</msg>
-
-<msg type="info" file="Xst" num="2399" delta="new" >RAMs &lt;<arg fmt="%s" index="1">Memoria_de_Dados_PM/Mram_Mem42</arg>&gt;, &lt;<arg fmt="%s" index="2">Memoria_de_Dados_PM/Mram_Mem47</arg>&gt; are equivalent, second RAM is removed
-</msg>
-
-<msg type="info" file="Xst" num="2399" delta="new" >RAMs &lt;<arg fmt="%s" index="1">Memoria_de_Dados_PM/Mram_Mem42</arg>&gt;, &lt;<arg fmt="%s" index="2">Memoria_de_Dados_PM/Mram_Mem45</arg>&gt; are equivalent, second RAM is removed
-</msg>
-
-<msg type="info" file="Xst" num="2399" delta="new" >RAMs &lt;<arg fmt="%s" index="1">Memoria_de_Dados_PM/Mram_Mem42</arg>&gt;, &lt;<arg fmt="%s" index="2">Memoria_de_Dados_PM/Mram_Mem46</arg>&gt; are equivalent, second RAM is removed
-</msg>
-
-<msg type="info" file="Xst" num="2399" delta="new" >RAMs &lt;<arg fmt="%s" index="1">Memoria_de_Dados_PM/Mram_Mem50</arg>&gt;, &lt;<arg fmt="%s" index="2">Memoria_de_Dados_PM/Mram_Mem51</arg>&gt; are equivalent, second RAM is removed
-</msg>
-
-<msg type="info" file="Xst" num="2399" delta="new" >RAMs &lt;<arg fmt="%s" index="1">Memoria_de_Dados_PM/Mram_Mem50</arg>&gt;, &lt;<arg fmt="%s" index="2">Memoria_de_Dados_PM/Mram_Mem52</arg>&gt; are equivalent, second RAM is removed
-</msg>
-
-<msg type="info" file="Xst" num="2399" delta="new" >RAMs &lt;<arg fmt="%s" index="1">Memoria_de_Dados_PM/Mram_Mem50</arg>&gt;, &lt;<arg fmt="%s" index="2">Memoria_de_Dados_PM/Mram_Mem53</arg>&gt; are equivalent, second RAM is removed
-</msg>
-
-<msg type="info" file="Xst" num="2399" delta="new" >RAMs &lt;<arg fmt="%s" index="1">Memoria_de_Dados_PM/Mram_Mem50</arg>&gt;, &lt;<arg fmt="%s" index="2">Memoria_de_Dados_PM/Mram_Mem54</arg>&gt; are equivalent, second RAM is removed
-</msg>
-
-<msg type="info" file="Xst" num="2399" delta="new" >RAMs &lt;<arg fmt="%s" index="1">Memoria_de_Dados_PM/Mram_Mem50</arg>&gt;, &lt;<arg fmt="%s" index="2">Memoria_de_Dados_PM/Mram_Mem55</arg>&gt; are equivalent, second RAM is removed
-</msg>
-
-<msg type="info" file="Xst" num="2399" delta="new" >RAMs &lt;<arg fmt="%s" index="1">Memoria_de_Dados_PM/Mram_Mem58</arg>&gt;, &lt;<arg fmt="%s" index="2">Memoria_de_Dados_PM/Mram_Mem61</arg>&gt; are equivalent, second RAM is removed
-</msg>
-
-<msg type="info" file="Xst" num="2399" delta="new" >RAMs &lt;<arg fmt="%s" index="1">Memoria_de_Dados_PM/Mram_Mem58</arg>&gt;, &lt;<arg fmt="%s" index="2">Memoria_de_Dados_PM/Mram_Mem59</arg>&gt; are equivalent, second RAM is removed
-</msg>
-
-<msg type="info" file="Xst" num="2399" delta="new" >RAMs &lt;<arg fmt="%s" index="1">Memoria_de_Dados_PM/Mram_Mem58</arg>&gt;, &lt;<arg fmt="%s" index="2">Memoria_de_Dados_PM/Mram_Mem60</arg>&gt; are equivalent, second RAM is removed
-</msg>
-
-<msg type="info" file="Xst" num="2399" delta="new" >RAMs &lt;<arg fmt="%s" index="1">Memoria_de_Dados_PM/Mram_Mem58</arg>&gt;, &lt;<arg fmt="%s" index="2">Memoria_de_Dados_PM/Mram_Mem62</arg>&gt; are equivalent, second RAM is removed
-</msg>
-
-<msg type="info" file="Xst" num="2399" delta="new" >RAMs &lt;<arg fmt="%s" index="1">Memoria_de_Dados_PM/Mram_Mem58</arg>&gt;, &lt;<arg fmt="%s" index="2">Memoria_de_Dados_PM/Mram_Mem63</arg>&gt; are equivalent, second RAM is removed
-</msg>
-
-<msg type="info" file="Xst" num="2169" delta="new" >HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+<msg type="info" file="Xst" num="2169" delta="old" >HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
 </msg>
 
 </messages>
