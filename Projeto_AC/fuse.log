@@ -21,7 +21,7 @@ Parsing VHDL file "/home/ise/Projects/Projeto_AC/Test_Placa_Mae.vhd" into librar
 Starting static elaboration
 Completed static elaboration
 Fuse Memory Usage: 98964 KB
-Fuse CPU Usage: 3710 ms
+Fuse CPU Usage: 3750 ms
 Compiling package standard
 Compiling package std_logic_1164
 Compiling package numeric_std
@@ -47,6 +47,6 @@ Time Resolution for simulation is 1ps.
 Waiting for 1 sub-compilation(s) to finish...
 Compiled 35 VHDL Units
 Built simulation executable /home/ise/Projects/Projeto_AC/Test_Placa_Mae_isim_beh.exe
-Fuse Memory Usage: 1461516 KB
-Fuse CPU Usage: 4710 ms
-GCC CPU Usage: 3870 ms
+Fuse Memory Usage: 1461492 KB
+Fuse CPU Usage: 4790 ms
+GCC CPU Usage: 3920 ms
