@@ -4,7 +4,7 @@ AR periferico_de_saida behavioral /home/ise/Projects/Projeto_AC/Periferico_de_Sa
 AR memoria_de_instrucoes behavioral /home/ise/Projects/Projeto_AC/Memoria_de_Instrucoes.vhd sub00/vhpl25 1710350170
 EN mux_pc NULL /home/ise/Projects/Projeto_AC/MUX_PC.vhd sub00/vhpl02 1710350147
 EN memoria_de_dados NULL /home/ise/Projects/Projeto_AC/Memoria_de_Dados.vhd sub00/vhpl22 1710350167
-EN banco_de_registos NULL /home/ise/Projects/Projeto_AC/Banco_de_Registos.vhd sub00/vhpl10 1710350155
+EN banco_de_registos NULL /home/ise/Projects/Projeto_AC/Banco_de_Registos.vhd sub00/vhpl10 1710499393
 AR mux_r behavioral /home/ise/Projects/Projeto_AC/MUX_R.vhd sub00/vhpl09 1710350154
 EN placa_mae NULL /home/ise/Projects/Projeto_AC/Placa_Mae.vhd sub00/vhpl26 1710350171
 EN mux_r NULL /home/ise/Projects/Projeto_AC/MUX_R.vhd sub00/vhpl08 1710350153
@@ -12,7 +12,7 @@ AR periferico_de_entrada behavioral /home/ise/Projects/Projeto_AC/Periferico_de_
 AR registo_flags behavioral /home/ise/Projects/Projeto_AC/Registo_Flags.vhd sub00/vhpl05 1710350150
 AR rom_de_descodificacao behavioral /home/ise/Projects/Projeto_AC/ROM_de_Descodificacao.vhd sub00/vhpl07 1710350152
 EN pc NULL /home/ise/Projects/Projeto_AC/PC.vhd sub00/vhpl00 1710350145
-AR banco_de_registos behavioral /home/ise/Projects/Projeto_AC/Banco_de_Registos.vhd sub00/vhpl11 1710350156
+AR banco_de_registos behavioral /home/ise/Projects/Projeto_AC/Banco_de_Registos.vhd sub00/vhpl11 1710499394
 AR placa_mae struct /home/ise/Projects/Projeto_AC/Placa_Mae.vhd sub00/vhpl27 1710350172
 AR processador struct /home/ise/Projects/Projeto_AC/Processador.vhd sub00/vhpl21 1710350166
 AR mux_pc behavioral /home/ise/Projects/Projeto_AC/MUX_PC.vhd sub00/vhpl03 1710350148

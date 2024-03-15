@@ -21,6 +21,8 @@ begin
 	type array_r is array (0 to 7) of STD_LOGIC_VECTOR (7 downto 0); -- Guardar os dados
 	variable registos : array_r;
 	
+	variable R0, R1, R2, R3, R4, R5, R6, R7 : STD_LOGIC_VECTOR (7 downto 0);
+	
 	begin
 	
 		-- Se o sinal do bit menos significativo de ESCR_P está a 1
@@ -28,17 +30,64 @@ begin
 	
 			-- Se está na transição ascendente do relógio
 			if rising_edge(clk) then
-				
+
 				-- Atribui os valores aos registos dependendo dos três bits menos significativos de SEL_R
-				registos(to_integer(unsigned(SEL_R (2 downto 0)))) := Dados_R;
+				case SEL_R (2 downto 0) is
+				
+					when "000" => R0 := Dados_R;
+					when "001" => R1 := Dados_R;
+					when "010" => R2 := Dados_R;
+					when "011" => R3 := Dados_R;
+					when "100" => R4 := Dados_R;
+					when "101" => R5 := Dados_R;
+					when "110" => R6 := Dados_R;
+					when "111" => R7 := Dados_R;
+					when others => R0 := "00000000"; 
+					R1 := "00000000"; 
+					R2 := "00000000"; 
+					R3 := "00000000"; 
+					R4 := "00000000"; 
+					R5 := "00000000"; 
+					R6 := "00000000"; 
+					R7 := "00000000";
+				
+				end case;
 				
 			end if;
 			
 		end if;
 		
 		-- Atribui o valor do registo correspondente a cada operando
-		Operando1 <= registos(to_integer(unsigned(SEL_R (2 downto 0))));
-		Operando2 <= registos(to_integer(unsigned(SEL_R (5 downto 3))));
+		
+		case SEL_R (2 downto 0) is
+				
+			when "000" => Operando1 <= R0;
+			when "001" => Operando1 <= R1;
+			when "010" => Operando1 <= R2;
+			when "011" => Operando1 <= R3;
+			when "100" => Operando1 <= R4;
+			when "101" => Operando1 <= R5;
+			when "110" => Operando1 <= R6;
+			when "111" => Operando1 <= R7;
+			-- Para qualquer outro valor dos 3 bits menos significativos de SEL_R, atribui 'X' a Operando1
+			when others => Operando1 <= (others => 'X');
+		
+		end case;
+		
+		case SEL_R (5 downto 3) is
+				
+			when "000" => Operando2 <= R0;
+			when "001" => Operando2 <= R1;
+			when "010" => Operando2 <= R2;
+			when "011" => Operando2 <= R3;
+			when "100" => Operando2 <= R4;
+			when "101" => Operando2 <= R5;
+			when "110" => Operando2 <= R6;
+			when "111" => Operando2 <= R7;
+			-- Para qualquer outro valor dos 3 bits mais significativos de SEL_R, atribui 'X' a Operando2
+			when others => Operando2 <= (others => 'X');
+		
+		end case;
 	
 	end process;
 

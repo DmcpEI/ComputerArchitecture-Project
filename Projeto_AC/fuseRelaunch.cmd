@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -lib "secureip" -o "/home/ise/Projects/Projeto_AC/Test_ALU_isim_beh.exe" -prj "/home/ise/Projects/Projeto_AC/Test_ALU_beh.prj" "work.Test_ALU" 
+-intstyle "ise" -incremental -o "/home/ise/Projects/Projeto_AC/Test_Placa_Mae_isim_beh.exe" -prj "/home/ise/Projects/Projeto_AC/Test_Placa_Mae_beh.prj" "work.Test_Placa_Mae" 

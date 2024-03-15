@@ -5,13 +5,13 @@ EN work/ALU 1710350157 FL /home/ise/Projects/Projeto_AC/ALU.vhd \
       PB ieee/std_logic_arith 1381692177
 AR work/ALU/Behavioral 1710350158 \
       FL /home/ise/Projects/Projeto_AC/ALU.vhd EN work/ALU 1710350157
-FL /home/ise/Projects/Projeto_AC/Banco_de_Registos.vhd 2024/03/12.19:53:06 P.20131013
-EN work/Banco_de_Registos 1710350155 \
+FL /home/ise/Projects/Projeto_AC/Banco_de_Registos.vhd 2024/03/15.10:42:28 P.20131013
+EN work/Banco_de_Registos 1710499393 \
       FL /home/ise/Projects/Projeto_AC/Banco_de_Registos.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
-AR work/Banco_de_Registos/Behavioral 1710350156 \
+AR work/Banco_de_Registos/Behavioral 1710499394 \
       FL /home/ise/Projects/Projeto_AC/Banco_de_Registos.vhd \
-      EN work/Banco_de_Registos 1710350155
+      EN work/Banco_de_Registos 1710499393
 FL /home/ise/Projects/Projeto_AC/Memoria_de_Dados.vhd 2024/03/12.19:06:32 P.20131013
 EN work/Memoria_de_Dados 1710350167 \
       FL /home/ise/Projects/Projeto_AC/Memoria_de_Dados.vhd \
