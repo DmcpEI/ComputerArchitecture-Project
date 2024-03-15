@@ -17,10 +17,7 @@ begin
 
 	process(ESCR_R, clk, SEL_R, Dados_R)
 	
-	-- Array que contem o 8 registos de 8 bits
-	type array_r is array (0 to 7) of STD_LOGIC_VECTOR (7 downto 0); -- Guardar os dados
-	variable registos : array_r;
-	
+	-- Variáveis dos registos
 	variable R0, R1, R2, R3, R4, R5, R6, R7 : STD_LOGIC_VECTOR (7 downto 0);
 	
 	begin
